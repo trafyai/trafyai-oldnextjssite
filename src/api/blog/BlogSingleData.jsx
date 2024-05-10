@@ -7,7 +7,7 @@ import Immersive from '@public/assets/Images/blog/immersive-r.png';
 import Spatial from '@public/assets/Images/blog/spatial-r.png';
 
 
-export default [
+const BlogSingleData= [
   {
     id: "Key-Principles-for-Seamless-User-Experiences",
     bgcolor: "#82a8fd",
@@ -174,4 +174,6 @@ export default [
   }
 
 ];
+
+export default BlogSingleData
 
