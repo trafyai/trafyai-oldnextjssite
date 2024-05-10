@@ -15,7 +15,10 @@
     --landing-heading-clr:#fcf;
     --h-font:'Raleway', sans-serif;
     --p-font:'Inter', sans-serif;
-  
+
+    /* new */
+    --h-text-w-for-b:#f8f8ff;
+    --p-text-w-for-b:#c8c1d1;
   }
   
   

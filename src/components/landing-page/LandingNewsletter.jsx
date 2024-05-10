@@ -1,6 +1,5 @@
 'use client';
 import React, { useState } from "react";
-import './LandingPage.css';
 
 const LandingNewsletter = () => {
     const [userData, setUserData] = useState({
