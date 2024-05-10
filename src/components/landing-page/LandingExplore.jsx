@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Link from 'next/link';
 
 export default function LandingExplore(){
     return(
@@ -10,8 +11,8 @@ export default function LandingExplore(){
                     </div>
                     <div className="landing-explore-right">
                         <div className="landing-explore-ai"><h3>Artificial Intelligence</h3></div>
-                     <div className="landing-explore-uiux"><h3>UI/UX</h3></div>
-                     <div className="landing-explore-dm"><h3>Digital Marketing</h3></div>
+                     <div className="landing-explore-uiux"><Link href="/courses/uiux-course"> <h3>UI/UX</h3></Link></div>
+                     <div className="landing-explore-dm"><Link href="/courses/digital-marketing-course"><h3>Digital Marketing</h3></Link> </div>
                     </div>
                 </div>
             </div>

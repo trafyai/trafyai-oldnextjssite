@@ -85,7 +85,7 @@ const Login = () => {
             alert(err.message);
         }
     }
-    // Function to toggle password visibility
+    // Function  toggle password visibility
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
     }
