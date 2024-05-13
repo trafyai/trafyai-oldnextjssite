@@ -22,7 +22,7 @@ export default function CoursePayment(props){
                         <div className="payment-points"><p>{props.sub}</p>
                         <ul>
                             {props.sublist && props.sublist.map((item,index)=>
-                           <li>{item.list}</li>
+                           <li key={index}>{item.list}</li>
                            
                             )}
                         </ul>

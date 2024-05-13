@@ -1,6 +1,7 @@
 import Halfstar from '@public/assets/Images/comman/common/star_half.svg';
 import Fullstar from '@public/assets/Images/comman/common/star_full.png';
-export default [
+
+const courseData = [
     {
         id:"uiux-course",
         title: "UI/UX Designing",
@@ -15,8 +16,8 @@ export default [
         rating: "4.8",
         level: "Certification",
         duration: "6 weeks",
-        halfstar:Halfstar,
-        fullstar:Fullstar
+        halfstar: Halfstar,
+        fullstar: Fullstar
     },
   
     {
@@ -33,8 +34,8 @@ export default [
         rating: "4.5",
         level: "Certification",
         duration: "4 weeks",
-        halfstar:Halfstar,
-        fullstar:Fullstar
+        halfstar: Halfstar,
+        fullstar: Fullstar
     },
    
     {
@@ -49,7 +50,9 @@ export default [
         rating: "4.7",
         level: "Certification",
         duration: "8 weeks",
-        halfstar:Halfstar,
-        fullstar:Fullstar
+        halfstar: Halfstar,
+        fullstar: Fullstar
     },
-]
+];
+
+export default courseData;

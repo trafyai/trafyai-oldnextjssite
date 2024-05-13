@@ -8,7 +8,7 @@ import Seo from '@public/assets/Images/service-page/SEO (1).svg';
 import Sales from '@public/assets/Images/service-page/sales.svg';
 
 
-export default[
+const serviceData=[
     
         { 
             id: 1, 
@@ -149,4 +149,6 @@ export default[
         
  
 
-]
+];
+
+export default serviceData;
