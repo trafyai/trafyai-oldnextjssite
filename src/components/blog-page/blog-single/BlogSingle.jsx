@@ -1,7 +1,7 @@
 'use client'
 import React, { useRef, useState } from "react";
 import '@styles/blog/BlogSingle.css';
-import BlogSingleData from "@api/blog/BlogSingleData";
+
 import Image from "next/image";
 
 
@@ -175,11 +175,11 @@ const handleSubmit = async (event) => {
               <div className="blog-page-table-of-contents">
                 <div className="blog-page-table-of-contents-container">
                   <h4>Table of contents</h4>
-                  {Object.keys(props.mainArticle).map((key, index) => (
-                    <p key={index} onClick={() => scrollToHeading(key)}>
-                      {props.mainArticle[key].heading}
-                    </p>
-                  ))}
+                  {props.mainArticle && Array.isArray(props.mainArticle) && props.mainArticle.map((article, index) => (
+                  <p key={index} onClick={() => scrollToHeading(index)}>
+                    {article.heading}
+                  </p>
+                ))}
                 </div>
               </div>
 
@@ -197,16 +197,16 @@ const handleSubmit = async (event) => {
                 )}
 
               
-                {props.mainArticle.map((article, mainIndex) => (
-                  <div className="blog-page-article-main-contents" key={mainIndex}>
-                    <h1 id={mainIndex}>{article.heading}</h1>
-                    {Array.isArray(article.description) ? (
-                      article.description.map((desc, descIndex) => (
-                        <p key={descIndex}>{desc}</p>
-                      ))
-                    ) : (
-                      <p>{article.description}</p>
-                    )}
+              {props.mainArticle && props.mainArticle.map((article, mainIndex) => (
+                <div className="blog-page-article-main-contents" key={mainIndex}>
+                  <h1 id={mainIndex}>{article.heading}</h1>
+                  {Array.isArray(article.description) ? (
+                    article.description.map((desc, descIndex) => (
+                      <p key={descIndex}>{desc}</p>
+                    ))
+                  ) : (
+                    <p>{article.description}</p>
+                  )}
                   </div>
                 ))}
                  <div className="blog-page-article-socials">

@@ -4,9 +4,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:  var( --h-text-b-clr);
+    background-color:  var(--landing-bg);
     padding: 0px 8px;
-    border-bottom: 1px solid #454444;
+    /* border-bottom: 1px solid #454444; */
     position: fixed;
     z-index: 100;
  }
@@ -18,6 +18,15 @@
  .logo{
     display: flex;
     align-items: center;
+ }
+ .header-white-logo,.header-black-logo{
+  display: none;
+ }
+ [data-theme="light"] .header-black-logo{
+  display: block;
+ }
+ [data-theme="dark"] .header-white-logo{
+  display: block;
  }
  .header-contents{
     display: flex;
@@ -31,18 +40,39 @@
     padding: 16px 16px;
      border: 0;
  }
- .header-academy a,.header-resources a{
+ .header-academy a,.header-resources a, .header-theme{
   text-decoration: none;
   font-family: 'Inter', sans-serif;
   font-size: 16px;
-  color:var(--h-text-w-alt-clr);
-  
+  font-weight: 500;
+  color:var(--landing-heading-clr); 
  }
-
- .header-solutions a:hover,.header-academy a:hover,.header-resources a:hover{
-  color:#c9c9ca;
+ .header-academy a:hover,.header-resources a:hover{
+  color: var(--landing-para-clr);
  }
-
+ .header-theme{
+  display: none;
+ }
+.header-theme-drop{
+  margin-top: 12px;
+  padding: 12px 20px;
+  background-color: var(--landing-cards-bg);
+  border-radius: 8px;
+}
+.header-theme-drop-item{
+  display: flex;
+  gap:1rem;
+  padding: 12px 0px ;
+}
+.header-theme-drop-item p{
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color:var(--landing-heading-clr); 
+}
+.header-theme-drop-item p:hover, .header-theme p:hover{
+  color: var(--landing-para-clr);
+}
  
  .solutions{
     display: flex;
@@ -184,39 +214,42 @@
   height: 100%;
   display: flex;
   align-items: center;
+  gap:1rem;
  }
  .header-login {
-    border: 2px solid var( --h-text-w-for-b);
+    border: 2px solid var( --landing-heading-clr);
     background-color: inherit;
     border-radius: 8px;
     padding: 8px 20px;
     padding-right: 24px;
+    color: var( --landing-heading-clr);
     margin-left: 8px;
-    color: var(--h-text-w-for-b);
+
     font-family: var(--p-font);
   font-weight: 500;
   font-size: 16px;
+  text-align: center;
  }
  .header-signup{
-  margin-left: 12px;
-    border: 2px solid var(--h-text-w-for-b);
+    border: 2px solid var( --landing-heading-clr);
     border-radius: 8px;
-    background-color: var(--h-text-w-for-b);
+    background-color: var( --landing-heading-clr);
     padding: 8px 20px;
-    color:  var( --h-text-b-clr);
+    color:  var( --landing-button-t);
     font-family: var(--p-font);
     font-weight: 500;
     font-size: 16px;
+    text-align: center;
  }
 
  .header-login:hover{
-    background-color: var(--h-text-w-for-b);
-    color:  var( --h-text-b-clr);
+    background-color: var( --landing-heading-clr);
+    color:  var( --landing-button-t);
  }
 
  .header-signup:hover{
-  background-color:  var( --h-text-b-clr);
-  color: var(--h-text-w-for-b);
+  background-color:  inherit;
+  color: var(--landing-heading-clr);
  }
 
  .hamburger{
@@ -256,7 +289,29 @@
   border-radius: 0px;
 
  }
+
+
+.light-mode-icon {
+  display: none; /* Hide the light mode icon by default */
+}
+
+.dark-mode-icon {
+  display: none; /* Hide the dark mode icon by default */
+}
+
+/* Show light mode icon when the theme is dark */
+[data-theme="dark"] .light-mode-icon {
+  display: block;
+}
+
+/* Show dark mode icon when the theme is light */
+[data-theme="light"] .dark-mode-icon {
+  display: block;
+}
  @media only screen and (max-width:1024px){
+  .header{
+    padding: 0px 16px;
+  }
   .header-contents{
     align-items: flex-start;
   }
@@ -288,7 +343,7 @@
     top:56px;
     right:0;
     justify-content: space-between;
-    background-color: var( --h-text-b-clr);
+    background-color: var( --landing-bg);
     overflow-y: scroll;
     gap:4rem;
   }
@@ -310,15 +365,19 @@
     text-align: left;
     
   }
+  .header-theme-icons{
+    display: none;
+  }
+  .header-theme{
+    display: block;
+   }
   .header-solutions,.header-academy,.header-resources,
  .header-login,.header-signup{
   width: 100%;
   font-size: 18px;
  }
- .header-solutions:hover,.header-academy:hover,.header-resources:hover{
-  background-color: #e1c8f8;
-  color: var( --h-text-b-clr);
- }
+
+ 
  .header-login,.header-signup{
   margin: 0px;
  }
@@ -359,7 +418,7 @@
   justify-content: flex-end;
   padding:0px 24px
 }
-.header-resources, .header-academy,.nav-user-profile{
+.header-resources, .header-academy,.nav-user-profile,  .header-theme{
   padding: 16px 24px;
 }
 .nav-user-profile{

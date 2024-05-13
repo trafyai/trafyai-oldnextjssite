@@ -11,7 +11,8 @@ export default function BlogLanding(){
                     {BlogLandingData.map((item,index)=>
                    
                     <div className="blog-landing-card" key={index}>
-                         <Link href={`/blogs/${item.id}`} key={item.id} className="blog-landing-card-inner">
+                        
+                         <Link href={`/blogs/${item.id}`}  className="blog-landing-card-inner">
                         <div className="blog-landing-card-image" style={{backgroundColor: item.bgColor}}>
                                                                 <Image src={item.image} alt={item.alt} height="max-content"/>
                         </div>

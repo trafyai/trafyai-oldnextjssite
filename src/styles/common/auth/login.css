@@ -4,7 +4,7 @@
     padding-top: 120px;
     padding-bottom: 60px;
     /* background-color:  #fff4ec; */
-    background-color: #FEF9F5;
+    background-color: var(--landing-bg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,12 +19,13 @@
     flex-direction: column;
     align-items: center;
     gap:2.5rem;
-    background-color: var(--h-text-w-clr);
+    background-color: var(--landing-bg);
 }
 .login-heading h1{ 
     font-family: var(--h-font);
     font-weight: 600;
     font-size: 28px;
+    color: var(--landing-heading-clr);
     
 }
 .form{
@@ -49,7 +50,7 @@
    font-weight: 400;
    border: 1px solid #c1bfbf;
    border-radius: 8px;
-   background-color: var(--h-text-w-clr);
+   background-color:var(--landing-bg);
 }
 .fname-holder:focus,.lname-holder:focus, .email-holder:focus ,.password-holder:focus{
     outline-style: none;
@@ -105,9 +106,9 @@
 .login-btn{
     width: 100%;
     padding: 8px 16px;
-    color: var(--h-text-w-clr);
-    background-color: var(--h-text-b-clr);
-    border: 2px solid var(--h-text-b-clr);
+    color: var(--landing-button-t);
+    background-color: var(--landing-bg);
+    border: 2px solid var(--landing-heading-clr);
     border-radius: 8px;
     font-size: 16px;
    font-family: "Roboto", sans-serif;
@@ -163,7 +164,7 @@
     padding-top: 120px;
     padding-bottom: 60px;
     /* background-color: #fff4ec; */
-    background-color: #FEF9F5;
+    background-color: var(--landing-bg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -177,12 +178,13 @@
     flex-direction: column;
     align-items: center;
     gap:2.5rem;
-    background-color: var(--h-text-w-clr);
+    background-color: var(--landing-bg);
 }
 .signup-heading h1{ 
     font-family: var(--h-font);
     font-weight: 600;
     font-size: 28px;
+    color: var(--landing-heading-clr);
     
 }
 .form{
@@ -207,7 +209,7 @@
    font-weight: 400;
    border: 1px solid #c1bfbf;
    border-radius: 8px;
-   background-color: var(--h-text-w-clr);
+   background-color: var(--landing-bg);
 }
 .Email{
     width: 100%;
@@ -290,9 +292,9 @@
 .signup-btn{
     width: 100%;
     padding: 8px 16px;
-    color: var(--h-text-w-clr);
-    background-color: var(--h-text-b-clr);
-    border: 2px solid var(--h-text-b-clr);
+    color: var(--landing-heading-clr);
+    background-color: var(--landing-bg);
+    border: 2px solid var(--landing-heading-clr);
     border-radius: 8px;
     font-size: 16px;
    font-family: "Roboto", sans-serif;
@@ -306,7 +308,7 @@
     font-size: 14px;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    color: rgb(78, 79, 79);
+    color: var(--landing-para-clr);
 }
 .error-message {
     font-family: "Roboto", sans-serif;

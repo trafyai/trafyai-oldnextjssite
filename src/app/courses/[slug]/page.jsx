@@ -48,17 +48,7 @@ export default function CoursePage({params}) {
 
     return (
         <main>
-             {/* <Helmet>
-            <title>{HeroData.courseHeading}</title>
             
-            <meta name="viewport" content="wslugth=device-wslugth, initial-scale=1.0" />
-            <link rel="canonical" href= {currentPageUrl}/>
-            <meta name="description" content={HeroData.courseDescription} />
-            <meta property="og:url" content= {currentPageUrl}/>
-            <meta property="og:title" content={HeroData.courseHeading}/>
-           <meta property="og:description" content={HeroData.courseDescription}/>
-           <link rel="preload" as="document" href={`${currentPageUrl}`} />
-    </Helmet> */}
             <CourseHero {...HeroData} />
             <CourseAbout {...AboutData} />
             <CourseSyllabus {...SyllabusData} />

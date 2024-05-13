@@ -3,7 +3,7 @@
     padding-bottom: 40px;
     display: flex;
    justify-content: center;
-   background-color:var(--h-text-w-alt-clr);
+   background-color:var(--landing-bg);
 }
 .course-landing-dm, .course-landing-ai{
     padding-top: 120px;
@@ -12,7 +12,7 @@
     flex-direction: column;
     gap:3rem;
    align-items: center;
-   background-color:var(--h-text-w-alt-clr);
+   background-color:var(--landing-bg);
 }
 .course-landing-ai-container{
     width: 80%;
@@ -24,7 +24,7 @@
     padding-top: 8px;
     font-size: 24px;
     font-weight: 600;
-    color: var(--h-text-b-clr);
+    color:var(--landing-heading-clr);
     font-family: var( --h-font);
 }
 .course-landing-ai-box-container{
@@ -35,12 +35,15 @@
 .course-landing-ai-box{
     width: 350px;
     border:1px solid #d8d8d8;
-    background-color: var(--h-text-w-clr);
+    color:var(--landing-bg);
     border-radius: 24px;
     height: max-content;
     display: flex;
     flex-direction: column;
     gap:2rem;
+}
+[data-theme="dark" ] .course-landing-ai-box{
+    border:1px solid #4e4e4e;
 }
 .course-landing-ai-card-title{
     padding:32px 24px;
@@ -64,7 +67,7 @@
     padding-top: 8px;
     font-size: 18px;
     font-weight: 500;
-    color: var(--h-text-b-clr);
+    color: var(--h-black);
     font-family: var( --h-font);
 }
 .course-landing-ai-contents{
@@ -79,7 +82,7 @@
     font-size: 16px;
     font-weight: 400;
     font-family: var( --p-font);
-    color:var(--p-text-b-clr);
+    color:var(--landing-para-clr);
 }
 .landing-ai-card-labels-contents{
     display: flex;
@@ -94,12 +97,16 @@
     font-size: 14px;
     font-weight: 400;
     font-family: var( --p-font);
-    color:#3f3f3f;
+    color:var(--landing-para-clr);
 }
 .course-landing-ai-box hr{
     border: 1px solid #f5f3f3;
     margin: 0.5rem 0px;
 }
+[data-theme="dark"] .course-landing-ai-box hr{
+    border: 1px solid #313131;
+}
+
 .landing-ai-card-ratings{
     display: flex;
     align-items: center;
@@ -117,7 +124,7 @@
     font-size: 14px;
     font-weight: 400;
     font-family: var( --p-font);
-    color:var(--p-text-b-clr);
+    color:var(--landing-para-clr);
     padding-left: 4px;
 }
 .landing-ai-card-level{
@@ -129,7 +136,7 @@
     font-size: 16px;
     font-weight: 400;
     font-family: var( --p-font);
-    color:var(--h-text-b-clr);
+    color:var(--landing-para-clr);
 }
 
 @media only screen and (max-width:900px){
