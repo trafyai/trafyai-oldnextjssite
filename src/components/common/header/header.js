@@ -5,8 +5,10 @@ import Link from 'next/link';
 import React, { useState, useRef , useEffect} from "react";
 import WhiteLogo from '@public/assets/Images/comman/header/whiteLogo.png';
 import BlackLogo from '@public/assets/Images/comman/header/blackLogo.png';
-import close from '@public/assets/Images/comman/header/close_small.png';
-import hamburger from '@public/assets/Images/comman/header/hamburger-white.png';
+import close from '@public/assets/Images/comman/header/close.png';
+import close1 from '@public/assets/Images/comman/header/close (1).png';
+import whiteHamburger from '@public/assets/Images/comman/header/wLogo (2).png';
+import blackHamburger from '@public/assets/Images/comman/header/bLogo.png';
 
 import { useTheme } from 'next-themes';
 import Light from '@public/assets/Images/comman/common/light_mode.png';
@@ -66,7 +68,10 @@ function Header({ initialTheme }) { // Add initialTheme prop here
       setHover(false);
     }, 200);
   }
-
+  function handleNavigation() {
+    setMenuOpen(false);
+    document.body.classList.remove('overflow'); // Ensure overflow class is removed when navigating
+  }
 
   return (
     <header className="header">
@@ -79,9 +84,9 @@ function Header({ initialTheme }) { // Add initialTheme prop here
         <div className={`header-contents ${menuOpen ? 'show-contents' : ''}`}>
 
           <div className="header-contents-first">
-            <button className="header-academy"><Link href="/courses">Courses</Link></button>
-            <button className="header-resources"><Link href="/blogs"> Resources </Link></button>
-            <div className="header-theme" onClick={themeDropDown}>
+            <button className="header-academy" onClick={handleNavigation}><Link href="/courses">Courses</Link></button>
+            <button className="header-resources" onClick={handleNavigation}><Link href="/blogs"> Resources </Link></button>
+            {/* <div className="header-theme" onClick={themeDropDown}>
               <p>Theme</p>
               {dropTheme &&
               <div className='header-theme-drop'>
@@ -89,14 +94,13 @@ function Header({ initialTheme }) { // Add initialTheme prop here
                 <div className='header-theme-drop-item' onClick={dthemeChange}><Image src={Dark}/><p>Dark theme</p> </div>
               </div>
               }
-            </div>
+            </div> */}
           </div>
 
           <div className="header-contents-second">
-            <Link href="/login" className="header-login"> Login</Link>
-            <Link href="/signup" className="header-signup"> Sign Up Free</Link>
-         
-          <div className='header-theme-icons'>
+            <Link href="/login" className="header-login" onClick={handleNavigation}> Login</Link>
+            <Link href="/signup" className="header-signup" onClick={handleNavigation}> Sign Up Free</Link>
+            <div className='header-theme-icons'>
             <Image
             src={Light}
             onClick={lthemeChange}
@@ -112,6 +116,7 @@ function Header({ initialTheme }) { // Add initialTheme prop here
             className=" dark-mode-icon"
           />
             </div>
+          
 
 
 
@@ -121,10 +126,27 @@ function Header({ initialTheme }) { // Add initialTheme prop here
         </div>
       </nav>
       
-      <div >
-        
-      <Image src={hamburger} alt="" className={`hamburger ${menuOpen ? 'hide' : ''}`} style={{height:"20px"}}  onClick={toggleMenu} />
-      <Image src={close} alt="" className={`exit-icon ${menuOpen ? 'show' : ''}`} onClick={toggleMenu} />
+      <div className='header-hambug-container'>
+      <div className='header-theme-icons-tab'>
+            <Image
+            src={Light}
+            onClick={lthemeChange}
+            width="20"
+            height="20"
+            className=" light-mode-icon"
+          />
+          <Image
+            src={Dark}
+            onClick={dthemeChange}
+            width="20"
+            height="20"
+            className=" dark-mode-icon"
+          />
+            </div>
+      <Image src={whiteHamburger} alt="" className={`whitehamburger ${menuOpen ? 'hide' : ''}`} style={{width:"30px",height:"20px"}}  onClick={toggleMenu} />
+      <Image src={blackHamburger} alt="" className={`blackhamburger ${menuOpen ? 'hide' : ''}`} style={{width:"30px",height:"20px"}}  onClick={toggleMenu} />
+      <Image src={close} alt="" className={`white-exit-icon ${menuOpen ? 'show' : ''}`} style={{width:"20px",height:"20px"}} onClick={toggleMenu} />
+      <Image src={close1} alt="" className={`black-exit-icon ${menuOpen ? 'show' : ''}`} style={{width:"20px",height:"20px"}} onClick={toggleMenu} />
       </div>
 
       
