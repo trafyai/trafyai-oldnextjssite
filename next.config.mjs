@@ -1,4 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+// next.config.mjs
 
-export default nextConfig;
+const nextConfig = {
+    // Enable webpack 5 support
+   
+    // Add other configuration options as needed
+  };
+  
+  export default nextConfig;
+  
