@@ -1,4 +1,4 @@
-'use client';
+'use client';   
 
 import React, { useState } from "react";
 import '@styles/common/auth/login.css';
@@ -8,6 +8,7 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/database';
 import Link from "next/link";
+import { useRouter } from 'next/navigation';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -37,6 +38,7 @@ const Signup = () => {
     const [confirmPasswordError, setConfirmPasswordError] = useState('');
     // eslint-disable-next-line
     const [allFieldError, setAllFieldError] = useState('');
+    const router = useRouter();
     
 
     const handleSumbit = async (e) => {
@@ -85,7 +87,7 @@ const Signup = () => {
             const user = await firebase.auth().createUserWithEmailAndPassword(email, password);
             if (user) {
                 alert("Account Created");
-                navigate('/login');
+                router.push('/login');
             }
         } catch (err) {
             alert(err.message);
@@ -97,7 +99,7 @@ const Signup = () => {
             const provider = new firebase.auth.GoogleAuthProvider();
             await firebase.auth().signInWithPopup(provider);
             alert("Signup with Google Successfully");
-            navigate('/login'); // Redirect to dashboard after successful sign in
+            router.push('/login'); // Redirect to dashboard after successful sign in
         } catch (err) {
             alert(err.message);
         }
