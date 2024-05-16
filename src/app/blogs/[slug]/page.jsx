@@ -8,8 +8,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
  
   
   const product = BlogSingleData.find(blog =>blog.id === id);
-//  const product = await fetch(`https://trafyai.com/blogs/${id}`).then((res) => res.json())
-//  const previousImages = (await parent).openGraph?.images || []
+
 
   return {
     title: product.title,
@@ -17,7 +16,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     openGraph: {
       title: product.title,
       description:product.metaDescription,
-      images: [product.metaImage],
+      images: product.metaImage,
     },
   }
 }
