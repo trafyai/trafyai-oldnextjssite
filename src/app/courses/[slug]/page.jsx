@@ -48,7 +48,7 @@ export default function CoursePage({params}) {
 
     return (
         <main>
-            
+             
             <CourseHero {...HeroData} />
             <CourseAbout {...AboutData} />
             <CourseSyllabus {...SyllabusData} />

@@ -2,6 +2,7 @@
 import React, { useRef, useState } from "react";
 import '@styles/blog/BlogSingle.css';
 
+
 import Image from "next/image";
 
 
@@ -133,28 +134,12 @@ const handleSubmit = async (event) => {
 
   return (
     <main>
-      {/* <Helmet>
-        <title>{mTitle}</title>
-        <link rel="canonical" href={currentPageUrl}/>
-        <meta name="description" content={mDesc} />
-
-        <meta property="og:site_name" content="Trafy" />
-        <meta property="og:image" content={props.metaImage} />
-        <meta property="og:image:height" content="600"/>
-        <meta property="og:image:width" content="1200"/>
-        <meta property="og:type" content="article"/>
-        <meta property="og:title" content={mTitle}/>
-        <meta property="og:url" content={currentPageUrl}/>
-        <meta property="og:description" content={mDesc}/> 
-      </Helmet> */}
+      
 
 
       <div className="blog-page">
-        <div className="blog-page-container">
-          <section
-            className="blog-page-hero-section"
-            style={{ backgroundColor: props.bgcolor }}
-          >
+        <div className="blog-page-container">  
+          <section className="blog-page-hero-section" style={{ backgroundColor: props.bgcolor }}>
             <div className="blog-page-hero-section-container">
               <div className="blog-page-hero-section-category">
                 <p className="blog-page-hero-category">{props.category}</p>
