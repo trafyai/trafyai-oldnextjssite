@@ -12,6 +12,16 @@ import Shopify from '@public/assets/Images/landing-page/better-together/shopify.
 import Wati from '@public/assets/Images/landing-page/better-together/wati.png';
 
 
+import amazon from '@public/assets/Images/landing-page/better-together/b-amazon.png';
+import clickup from '@public/assets/Images/landing-page/better-together/b-clickup.png';
+import hostinger from '@public/assets/Images/landing-page/better-together/b-hostinger.png';
+import graphy from '@public/assets/Images/landing-page/better-together/b-grphy.png';
+import hubspot from '@public/assets/Images/landing-page/better-together/b-hubspot.png';
+import mailercloud from '@public/assets/Images/landing-page/better-together/b-mailercloud.png';
+import semrush from '@public/assets/Images/landing-page/better-together/b-semrush.png';
+import shopify from '@public/assets/Images/landing-page/better-together/b-shopify.png';
+import wati from '@public/assets/Images/landing-page/better-together/b-wati.png';
+
 export default function LandingBetterTogether(){
     return(
         <main>
@@ -34,6 +44,16 @@ export default function LandingBetterTogether(){
                         <div className="landing-better-image"><Image src={Shopify} alt="Shopify" /></div>
                         <div className="landing-better-image"><Image src={Mailercloud} alt="Mailercloud" /></div>
                         <div className="landing-better-image"><Image src={Wati} alt="Wati" /></div>
+
+                        <div className="landing-better-image-b"><Image src={amazon} alt="amazon" /></div>
+                        <div className="landing-better-image-b"><Image src={hostinger} alt="hostinger" /></div>
+                        <div className="landing-better-image-b"><Image src={semrush} alt="semrush" height= {24} /></div>
+                        <div className="landing-better-image-b"><Image src={clickup} alt="clickup" /></div>
+                        <div className="landing-better-image-b"><Image src={hubspot}alt="hubspot" /></div>
+                        <div className="landing-better-image-b"><Image src={graphy} alt="graphy" height= {24} /></div>
+                        <div className="landing-better-image-b"><Image src={shopify} alt="shopify" /></div>
+                        <div className="landing-better-image-b"><Image src={mailercloud} alt="mailercloud" /></div>
+                        <div className="landing-better-image-b"><Image src={wati} alt="wati" /></div>
                            
                     </div>
                 </div>

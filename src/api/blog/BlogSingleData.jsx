@@ -2,9 +2,9 @@ import Twitter from '@public/assets/Images/comman/common/socials-black/twitter.p
 import Linkedin from '@public/assets/Images/comman/common/socials-black/linkedin.png';
 import Facebook from '@public/assets/Images/comman/common/socials-black/facebook.png';
 
-import Ux from '@public/assets/Images/blog/ux-r.png';
-import Immersive from '@public/assets/Images/blog/immersive-r.png';
-import Spatial from '@public/assets/Images/blog/spatial-r.png';
+import Ux from '@public/assets/Images/blog/5 key principles.png';
+import Immersive from '@public/assets/Images/blog/immersive ui design.png';
+import Spatial from '@public/assets/Images/blog/digital dimension.png';
 
 
 const BlogSingleData= [

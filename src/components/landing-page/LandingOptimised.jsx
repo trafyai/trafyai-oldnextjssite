@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import Image from 'next/image';
 import ExpandMore from '@public/assets/Images/comman/common/expand_more_white.png';
+import ExpandMoreB from '@public/assets/Images/comman/common/expand_more_black.png';
+
 
 export default function LandingOptimised() {
 
@@ -30,7 +32,9 @@ export default function LandingOptimised() {
                             <div className="landing-optimised-accordion-contents" onClick={() => openAccordion(1)}>
                                 <div className="landing-accordion-heading">
                                     <h4>For Students</h4>
-                                    <Image src={ExpandMore} alt="Expand" className={`accordion-icon ${accordionStates[1] ? 'rotated' : ''}`} />
+                                    <Image src={ExpandMoreB} alt="Expand" className={`baccordion-icon ${accordionStates[1] ? 'rotated' : ''}`} />
+
+                                    <Image src={ExpandMore} alt="Expand" className={`waccordion-icon ${accordionStates[1] ? 'rotated' : ''}`} />
                                 </div>
                                 {accordionStates[1] && <div className="landing-accordion-contents">Hoping for a bright future? Want to get into the core company of your interest? 
                                 We got you covered. Our industry recognised career path will help you gain all the essential skills you need and land your first job with an attractive remuneration.
@@ -39,7 +43,9 @@ export default function LandingOptimised() {
                             <div className="landing-optimised-accordion-contents" onClick={() => openAccordion(2)}>
                                 <div className="landing-accordion-heading">
                                     <h4>For Professionals</h4>
-                                    <Image src={ExpandMore} alt="Expand" className={`accordion-icon ${accordionStates[2] ? 'rotated' : ''}`} />
+                                    <Image src={ExpandMoreB} alt="Expand" className={`baccordion-icon ${accordionStates[1] ? 'rotated' : ''}`} />
+
+                                    <Image src={ExpandMore} alt="Expand" className={`waccordion-icon ${accordionStates[2] ? 'rotated' : ''}`} />
                                 </div>
                                 {accordionStates[2] && <div className="landing-accordion-contents">Feeling detached from the job you are passionate about? Want to transition your career to a treading and growing industry? 
                                 We at trafy are here to help. We know transitions are hard, but our career experts will help you choose a high demand course and guide you to get into trending jobs with good CTC</div>}

@@ -1,7 +1,10 @@
 import React from 'react'
 import BlogSingleData from '@api/blog/BlogSingleData';
 import BlogPage from '@components/blog-page/blog-single/BlogSingle'
+// import Open from './opengraph-image'
+import Image from './opengraph-image';
 
+import Head from 'next/head';
 export async function generateMetadata({ params, searchParams }, parent) {
   // read route params
   const id = params.slug
@@ -13,10 +16,13 @@ export async function generateMetadata({ params, searchParams }, parent) {
   return {
     title: product.title,
     description:product.metaDescription,
+    // image: {
+    //   url:'./opengraph-image.js',
+    // },
     openGraph: {
       title: product.title,
       description:product.metaDescription,
-      images: product.metaImage,
+      image: product.metaImage,
     },
   }
 }
@@ -26,10 +32,14 @@ const page = ({params}) => {
   const BlogData = BlogSingleData.find(blog =>blog.id === slug);
 
   return (
-    <main>
+    <div>
+     <Head>
+     <meta property="og:image" content={Image} />
+     </Head>
+     {/* <Open/> */}
      
       <BlogPage {...BlogData} />
-    </main>
+    </div>
   )
 }
 
