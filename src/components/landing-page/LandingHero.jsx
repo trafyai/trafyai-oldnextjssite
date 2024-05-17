@@ -17,7 +17,7 @@ const LandingHero = () => {
                     </div>
                     <div className="landing-hero-buttons">
                         <Link className="landing-hero-explore-btn" href="/courses">Explore Courses</Link>
-                        <button className="landing-hero-join-btn">Join Discussions</button>
+                        <a className="landing-hero-join-btn" href="https://discord.gg/rd6Xmua6" target="_blank" rel="noopener noreferrer">Join Discussions</a>
                     </div>
                 </div>
             </div>
