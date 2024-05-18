@@ -223,7 +223,15 @@ justify-content: center;
     background-color: inherit;
     color: var(--landing-heading-clr);
 }
-
+.blog-social-b,.blog-social-w{
+    display: none;
+}
+[data-theme='light'] .blog-social-b{
+    display: block;
+}
+[data-theme='dark'] .blog-social-w{
+    display: block;
+}
 @media only screen and (max-width:1024px){
     .blog-page-hero-section-container{
         width: 60%;

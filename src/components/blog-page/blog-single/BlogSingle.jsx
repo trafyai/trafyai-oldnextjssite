@@ -1,7 +1,12 @@
 'use client'
 import React, { useRef, useState } from "react";
 import '@styles/blog/BlogSingle.css';
-
+import Twitter from '@public/assets/Images/comman/common/socials-black/twitter.png';
+import Linkedin from '@public/assets/Images/comman/common/socials-black/linkedin.png';
+import Facebook from '@public/assets/Images/comman/common/socials-black/facebook.png';
+import Twitter_w from '@public/assets/Images/comman/common/socials-white/twitter-w.png';
+import Linkedin_w from '@public/assets/Images/comman/common/socials-white/linkedin-w.png';
+import Facebook_w from '@public/assets/Images/comman/common/socials-white/facebook-w.png';
 
 import Image from "next/image";
 
@@ -19,7 +24,7 @@ export default function BlogPage(props) {
   
     
 
-   
+  const currentPageUrl = `https://trafyai.com${location.pathname}`;
   
 
   const scrollToHeading = (headingId) => {
@@ -196,9 +201,12 @@ const handleSubmit = async (event) => {
                 ))}
                  <div className="blog-page-article-socials">
                   Share:
-                  <Image src={props.linkedin} alt="" onClick={shareToLinkedIn}/>
-                  <Image src={props.facebook} alt="" onClick={shareToFacebook}/>
-                  <Image src={props.twitter} alt="" onClick={shareToTwitter}/>
+                  <Image src={Linkedin} alt="" onClick={shareToLinkedIn} className="blog-social-b"/>
+                  <Image src={Facebook} alt="" onClick={shareToFacebook} className="blog-social-b"/>
+                  <Image src={Twitter} alt="" onClick={shareToTwitter} className="blog-social-b"/>
+                  <Image src={Linkedin_w} alt="" onClick={shareToLinkedIn} className="blog-social-w"/>
+                  <Image src={Facebook_w} alt="" onClick={shareToFacebook} className="blog-social-w"/>
+                  <Image src={Twitter_w} alt="" onClick={shareToTwitter} width="30" height="30" className="blog-social-w"/>
                 </div>
               </div>
             </div>

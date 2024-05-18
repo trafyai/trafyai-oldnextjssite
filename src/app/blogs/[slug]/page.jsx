@@ -1,7 +1,7 @@
 import React from 'react'
 import BlogSingleData from '@api/blog/BlogSingleData';
 import BlogPage from '@components/blog-page/blog-single/BlogSingle'
-// import Open from './opengraph-image'
+import Open from './opengraph-image'
 import Image from './opengraph-image';
 
 import Head from 'next/head';
@@ -16,13 +16,12 @@ export async function generateMetadata({ params, searchParams }, parent) {
   return {
     title: product.title,
     description:product.metaDescription,
-    // image: {
-    //   url:'./opengraph-image.js',
-    // },
+    metadataBase: new URL(`https://trafyai.com/blogs/${product.id}`),
+    type:"article",
+    image:[Open],
     openGraph: {
       title: product.title,
-      description:product.metaDescription,
-      image: product.metaImage,
+      description:product.metaDescription
     },
   }
 }

@@ -582,9 +582,17 @@
     gap: 2rem;
     justify-content: space-between;
 }
-.landing-review-card img {
-    height: 24px;
-    width: 25.229999999999997px;
+
+.review-comma-w ,.review-comma-b{
+    /* height: 24px;
+    width: 25.229999999999997px; */
+    display:none;
+}
+[data-theme='light'] .review-comma-b{
+    display: block;
+}
+[data-theme='dark'] .review-comma-w{
+    display: block;
 }
 .landing-reviews{
     display: flex;
