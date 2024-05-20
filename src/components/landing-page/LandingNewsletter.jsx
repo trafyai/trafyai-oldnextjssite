@@ -34,17 +34,32 @@ const LandingNewsletter = () => {
             });
 
             if (response.ok) {
-                setSubscribed(true);
-                setErrorMessage(""); 
-                setUserData({ email: "" }); 
+                setSubscribed(true); // Set subscribed state to true
+                setErrorMessage(""); // Clear error message
+                setUserData({ email: "" }); // Clear the input field
             } else {
                 setErrorMessage("Error submitting the form. Please try again later.");
+            }
+
+             // Send email to user
+             const emailRes = await fetch('http://localhost:5002/newsletter/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email })
+            });
+
+            if (!emailRes.ok) {
+                throw new Error('Error sending email');
             }
         } catch (error) {
             console.error("Error submitting the form:", error);
             setErrorMessage("Error submitting the form. Please try again later.");
         }
     };
+
+
 
     const renderFormOrMessage = () => {
         if (subscribed) {
