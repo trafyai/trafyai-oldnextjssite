@@ -34,6 +34,9 @@
     --landing-card-para-clr:#e2e2e2;
     --landing-button-t:#f8f8ff;
     --landing-cards-border:#dedede;
+
+    --blog-cards-border:#dedede;
+    --blog-cards-bg:#fcfefe;
     
   }
   [data-theme='dark'] {
@@ -53,6 +56,8 @@
 
     --landing-button-t:#1c1623;
     
+    --blog-cards-border:#3e3e3e;
+    --blog-cards-bg:#2b2432;
   }
 
   *{
