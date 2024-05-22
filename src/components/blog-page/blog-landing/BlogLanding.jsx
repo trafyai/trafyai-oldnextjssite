@@ -3,6 +3,9 @@ import '@styles/blog/BlogLanding.css'
 import BlogLandingData from "@api/blog/BlogLandingData";
 import Link from "next/link";
 import Image from "next/image";
+
+
+
 export default function BlogLanding(){
     return(
         <main>
@@ -25,7 +28,10 @@ export default function BlogLanding(){
                             <h1>{item.title}</h1>
                         </div>
                         <div className="blog-landing-card-description">
-                            <p>{item.description}</p>
+                        <p>
+                        {item.description}
+                        {/* {item.description.split(' ').slice(0, 15).join(' ')}{item.description.split(' ').length > 15 ? '...' : ''} */}
+                        </p>
                         </div>
                         <div className="blog-landing-card-author">
                             <p>{item.author}</p>

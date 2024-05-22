@@ -33,6 +33,10 @@
     --landing-subheading-clr:#fcf;
     --landing-card-para-clr:#e2e2e2;
     --landing-button-t:#f8f8ff;
+    /* --landing-cards-border:#dedede; */
+
+    --landing-cards-border:#dedede;
+    --landing-cards-bg:#fcfefe;
     
   }
   [data-theme='dark'] {
@@ -45,12 +49,15 @@
     /* landing-page */
     --landing-bg:#1c1623;
     --landing-cards-bg:#322a3b;
+    /* --landing-cards-border:#5f5f5f; */
     
     --landing-heading-clr:#f8f8ff;
     --landing-para-clr:#c8c1d1;
 
     --landing-button-t:#1c1623;
     
+    --landing-cards-border:#3e3e3e;
+    --landing-cards-bg:#2b2432;
   }
 
   *{

@@ -24,7 +24,7 @@ export default function BlogPage(props) {
   
     
 
-  const currentPageUrl = `https://trafyai.com${location.pathname}`;
+  const currentPageUrl = `https://trafyai.com/blogs/${props.id}`;
   
 
   const scrollToHeading = (headingId) => {
@@ -176,7 +176,7 @@ const handleSubmit = async (event) => {
               </div>
             </div>
           </section>
-
+        
           <section className="blog-page-article-section" >
             <div className="blog-page-article-section-container">
               <div className="blog-page-table-of-contents">
