@@ -1,11 +1,11 @@
 'use client';
 
-import React, { useState } from "react";
-import '@styles/common/auth/Enquiry.css'
-
+import { useState, useEffect } from 'react';
+import '@styles/common/auth/Enquiry.css';
+import axios from 'axios';
+import { useRouter } from 'next/navigation';
 
 const EnquiryForm = () => {
-
     const [formData, setFormData] = useState({
         fname: "",
         lname: "",
@@ -22,6 +22,9 @@ const EnquiryForm = () => {
         message: ""
     });
 
+    const [formSubmitted, setFormSubmitted] = useState(false);
+    const router = useRouter();
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
@@ -34,7 +37,7 @@ const EnquiryForm = () => {
                 errorMessage = !namePattern.test(value) ? "Should contain alphabetic characters only." : "";
                 break;
             case "email":
-                const emailPattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 errorMessage = !emailPattern.test(value) ? "Please enter a valid email address." : "";
                 break;
             case "phone":
@@ -79,7 +82,17 @@ const EnquiryForm = () => {
         try {
             const res = await fetch('https://courseenquiryform-default-rtdb.firebaseio.com/EnquiryFormData.json', options);
             if (res.ok) {
-                alert("Thank You For Submitting the Form ");
+                axios.post("http://localhost:5002/course-enquiry/submit", { email},{ timeout: 10000 })
+                .then(response => {
+                    console.log(response.data);
+                    window.alert("Thank you for submitting the form.");
+                    setFormSubmitted(true); // Set formSubmitted to true to trigger navigation
+                })
+                .catch(error => {
+                    console.error(error);
+                    alert("An error occurred while sending the email notification.");
+                });
+
                 setFormData({
                     fname: "",
                     lname: "",
@@ -96,51 +109,48 @@ const EnquiryForm = () => {
         }
     };
 
+    useEffect(() => {
+        if (formSubmitted) {
+            router.push('/courses/uiux-course');
+            setFormSubmitted(false); // Reset formSubmitted to false for future submissions
+        }
+    }, [formSubmitted, router]);
 
     return (
         <main>
-             {/* <Helmet>
-        <meta name="robots" content="noindex" />
-      </Helmet> */}
             <div className="course-enquiry-form">
                 <div className="course-enquiry-form-container">
                     <div className="course-enquiry-form-contents">
-
                         <form className="enquiryform" onSubmit={handleSubmit} autoComplete="off" method="POST">
                             <div className="enquiryform-heading">
                                 <h2>Ready to get started?</h2>
                             </div>
-
                             <div className="enquiryname">
-                            <div className="enquiryfname">
-                                {/* <label htmlFor="">First Name:</label> */}
-                                <input type="text" placeholder="First Name" name="fname" className="enquiry-fname" required onChange={handleChange} value={formData.fname}  />
-                                {errorMessages.fname && <p className="error-message">{errorMessages.fname}</p>}
+                                <div className="enquiryfname">
+                                    <input type="text" placeholder="First Name" name="fname" className="enquiry-fname" required onChange={handleChange} value={formData.fname} />
+                                    {errorMessages.fname && <p className="error-message">{errorMessages.fname}</p>}
+                                </div>
+                                <div className="enquirylname">
+                                    <input type="text" placeholder="Last Name" className="enquiry-lname" name="lname" required onChange={handleChange} value={formData.lname} />
+                                    {errorMessages.lname && <p className="error-message">{errorMessages.lname}</p>}
+                                </div>
                             </div>
-                            <div className="enquirylname">
-                            {/* <label htmlFor="">Last Name:</label> */}
-                                <input type="text" placeholder="Last Name" className="enquiry-lname" name="lname" required onChange={handleChange} value={formData.lname}  />
-                                {errorMessages.lname && <p className="error-message">{errorMessages.lname}</p>}
-                            </div>
-                            </div>
-
                             <div className="enquiryemail">
-                                {/* <label htmlFor="">Email:</label> */}
                                 <input type="email" placeholder="Email" required className="enquiry-email" name="email" onChange={handleChange} value={formData.email} />
                                 {errorMessages.email && <p className="error-message">{errorMessages.email}</p>}
                             </div>
                             <div className="enquiryphone">
-                            {/* <label htmlFor="">Phone Number:</label> */}
                                 <input type="tel" placeholder="Phone Number" required className="enquiry-phone" name="phone" onChange={handleChange} value={formData.phone} />
                                 {errorMessages.phone && <p className="error-message">{errorMessages.phone}</p>}
                             </div>
+                            {/* <div className="enquirycourse">
+                                <input type="text" placeholder="Course Name " required className="enquiry-course" name="course" onChange={handleChange} value={formData.course} />
+                                {errorMessages.phone && <p className="error-message">{errorMessages.phone}</p>}
+                            </div> */}
                             <div className="enquirymessage">
-                                {/* <label htmlFor="">Message:</label> */}
-                                <textarea type="text" placeholder="Message" className="enquiry-message" name="message" style={{ width: "100%" }}  value={formData.message} onChange={handleChange} />
+                                <textarea type="text" placeholder="Message" className="enquiry-message" name="message" style={{ width: "100%" }} value={formData.message} onChange={handleChange} />
                             </div>
-
                             <button type="submit" className="course-enquiry-button">Get in touch</button>
-
                         </form>
                     </div>
                 </div>
@@ -148,4 +158,5 @@ const EnquiryForm = () => {
         </main>
     )
 }
+
 export default EnquiryForm;

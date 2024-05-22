@@ -8,7 +8,6 @@ export const metadata = {
  
   title: {
     default: 'Interactive Learning, Next Generation Courses.',
-    template:'%s | trafy'
   },
   description: 'Learn UI/UX designing, artificial intelligence, and digital marketing with our interactive courses and accelerate your career with expert guidance',
 

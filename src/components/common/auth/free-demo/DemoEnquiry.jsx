@@ -1,7 +1,9 @@
 'use client'
-import React, { useState } from "react";
+import { useState, useEffect } from 'react';
 import '@styles/common/auth/Enquiry.css'
 
+import axios from 'axios';
+import { useRouter } from 'next/navigation';
 
 const DemoEnquiry = () => {
 
@@ -21,6 +23,9 @@ const DemoEnquiry = () => {
         message: ""
     });
 
+    const [formSubmitted, setFormSubmitted] = useState(false);
+    const router = useRouter();
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
@@ -39,14 +44,11 @@ const DemoEnquiry = () => {
 
         const { fname, lname, email, phone, message } = formData;
 
-        const namePattern = /^[A-Za-z]+$/;
-        const phonePattern = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-
         const newErrorMessages = {
-            fname: !namePattern.test(fname) ? "First name should contain alphabetic characters only." : "",
-            lname: !namePattern.test(lname) ? "Last name should contain alphabetic characters only." : "",
-            email: !validateEmail(email) ? "Please enter a valid email address." : "",
-            phone: !phonePattern.test(phone) ? "Please enter a valid phone number." : "",
+            fname: !fname ? "Please enter your first name." : "",
+            lname: !lname ? "Please enter your last name." : "",
+            email: !email ? "Please enter your email address." : "",
+            phone: !phone ? "Please enter your phone number." : "",
             message: "" // No validation for the message field
         };
 
@@ -68,7 +70,17 @@ const DemoEnquiry = () => {
         try {
             const res = await fetch('https://freedemo-form-default-rtdb.firebaseio.com/freeDemoFormdata.json', options);
             if (res.ok) {
-                alert("Thank You For Submitting the Form ");
+                axios.post("http://localhost:5002/freedemo-form/submit", { email },{ timeout: 10000 })
+                .then(response => {
+                    console.log(response.data);
+                    window.alert("Thank you for submitting the form.");
+                    setFormSubmitted(true); // Set formSubmitted to true to trigger navigation
+                })
+                .catch(error => {
+                    console.error(error);
+                    alert("An error occurred while sending the email notification.");
+                });
+
                 setFormData({
                     fname: "",
                     lname: "",
@@ -84,6 +96,13 @@ const DemoEnquiry = () => {
             alert("Error: " + error.message);
         }
     };
+
+    useEffect(() => {
+        if (formSubmitted) {
+            router.push('/courses/uiux-course');
+            setFormSubmitted(false); // Reset formSubmitted to false for future submissions
+        }
+    }, [formSubmitted, router]);
 
     return (
         <main>
