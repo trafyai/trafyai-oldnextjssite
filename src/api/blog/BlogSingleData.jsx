@@ -2,16 +2,14 @@ import Twitter from '@public/assets/Images/comman/common/socials-black/twitter.p
 import Linkedin from '@public/assets/Images/comman/common/socials-black/linkedin.png';
 import Facebook from '@public/assets/Images/comman/common/socials-black/facebook.png';
 
-import Ux from '@public/assets/Images/blog/5 key principles.png';
-import Immersive from '@public/assets/Images/blog/immersive ui design.png';
-import Spatial from '@public/assets/Images/blog/digital dimension.png';
+
 
 
 const BlogSingleData= [
   {
     id: "Key-Principles-for-Seamless-User-Experiences",
     bgcolor: "#82a8fd",
-    metaImage:Ux,
+    metaImage:"https://firebasestorage.googleapis.com/v0/b/testing-f9c8c.appspot.com/o/5%20key%20principles.png?alt=media&token=dedf64ee-262b-46af-8956-b08aa08a8981",
     category: "UI/UX Design",
     read: "4.7 mins",
     title: "5 Key Principles for Seamless User Experiences",
@@ -71,7 +69,7 @@ const BlogSingleData= [
   {
     id: "The-Essence-of-Immersive-UI-Design",
     bgcolor: "#b089eb",
-    metaImage:Immersive,
+    metaImage:"https://firebasestorage.googleapis.com/v0/b/testing-f9c8c.appspot.com/o/immersive%20ui%20design.png?alt=media&token=a1bbd409-46ab-4dc4-a320-c973f39bce87",
     category: "UI/UX Design",
     read: "3.9 mins",
     title: "The Essence of Immersive UI Design",
@@ -123,7 +121,7 @@ const BlogSingleData= [
   {
     id: "Digital-Dimensions-and-Exploring-Spatial-Design-in-UIUX",
     bgcolor: "#a4ff9e",
-    metaImage:Spatial,
+    metaImage:"https://firebasestorage.googleapis.com/v0/b/testing-f9c8c.appspot.com/o/digital%20dimension.png?alt=media&token=88153cb6-7658-4db0-b706-0a693418baa6",
     category: "UI/UX Design",
     read: "4.3 mins",
     title: "Digital Dimensions and Exploring Spatial Design in UI/UX",

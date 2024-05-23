@@ -112,7 +112,7 @@ function Header({ initialTheme }) { // Add initialTheme prop here
             src={Dark}
             onClick={dthemeChange}
             width="20"
-            height="20.01"
+            height="20"
             className=" dark-mode-icon"
           />
             </div>
