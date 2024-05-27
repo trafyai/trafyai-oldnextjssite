@@ -10,23 +10,23 @@ import CourseCertificate from "@components/course-page/course-page/CourseCertifi
 import CoursePayment from "@components/course-page/course-page/CoursePayment";
 import CourseFaq from "@components/course-page/course-page/CourseFaq";
 
-export async function generateMetadata({ params, searchParams }, parent) {
+// export async function generateMetadata({ params, searchParams }, parent) {
   
-    const id = params.slug;
-    const product = CourseHeroData.find(course =>course.id === id);
+//     const id = params.slug;
+//     const product = CourseHeroData.find(course =>course.id === id);
    
    
    
-    return {
-      title: product.courseHeading,
-      description:product.courseDescription,
-      openGraph: {
-        title: product.courseHeading,
-        description:product.courseDescription,
-        images: [product.metaImage],
-      },
-    }
-  }
+//     return {
+//       title: product.courseHeading,
+//       description:product.courseDescription,
+//       openGraph: {
+//         title: product.courseHeading,
+//         description:product.courseDescription,
+//         images: [product.metaImage],
+//       },
+//     }
+//   }
 
 
 export default function CoursePage({params}) {
