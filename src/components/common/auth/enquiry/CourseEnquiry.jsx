@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import '@styles/common/auth/Enquiry.css';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
@@ -25,7 +25,6 @@ const EnquiryForm = () => {
         message: ""
     });
 
-    const [formSubmitted, setFormSubmitted] = useState(false);
     const router = useRouter();
 
     const handleChange = (e) => {
@@ -74,39 +73,32 @@ const EnquiryForm = () => {
             return;
         }
 
-        // Proceed with form submission
-        const options = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData)
-        };
+        // Show the "Thank you" popup immediately
+        Swal.fire({
+            title: 'Form Submitted',
+            text: 'Thank you for submitting the form.',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        }).then(() => {
+            router.back(); // Navigate back to the previous page
+        });
 
+        // Proceed with form submission and additional actions asynchronously
         try {
-            const res = await fetch('https://courseenquiryform-default-rtdb.firebaseio.com/EnquiryFormData.json', options);
+            const res = await fetch('https://uiux-courseenquiryform-default-rtdb.firebaseio.com/UIUX-CourseEnquiryFormData.json', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
             if (res.ok) {
-                axios.post("http://localhost:5002/course-enquiry/submit", { email: formData.email, fname: formData.fname, course: formData.course }, { timeout: 10000 })
-                    .then(response => {
-                        console.log(response.data);
-                        Swal.fire({
-                            title: 'Form Submitted',
-                            text: 'Thank you for submitting the form.',
-                            icon: 'success',
-                            confirmButtonText: 'OK'
-                        }).then(() => {
-                            setFormSubmitted(true); // Set formSubmitted to true to trigger navigation
-                        });
-                    })
-                    .catch(error => {
-                        console.error(error);
-                        Swal.fire({
-                            title: 'Error',
-                            text: 'An error occurred while sending the email notification.',
-                            icon: 'error',
-                            confirmButtonText: 'OK'
-                        });
-                    });
+                await axios.post("https://trafyai.com/course-enquiry/submit", {
+                    email: formData.email,
+                    fname: formData.fname,
+                    course: formData.course
+                }, { timeout: 10000 });
 
                 setFormData({
                     fname: "",
@@ -134,13 +126,6 @@ const EnquiryForm = () => {
             });
         }
     };
-
-    useEffect(() => {
-        if (formSubmitted) {
-            router.push('/courses/uiux-course');
-            setFormSubmitted(false); // Reset formSubmitted to false for future submissions
-        }
-    }, [formSubmitted, router]);
 
     return (
         <main>
