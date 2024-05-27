@@ -2,6 +2,8 @@
 import React, {useState , useEffect} from "react";
 import Image from "next/image";
 import Link from "next/link";
+import shareBlack from '@public/assets/Images/course-page/hero-section/share.svg';
+import shareWhite from '@public/assets/Images/course-page/hero-section/share-white.png';
 
 
 export default function CourseHero(props){
@@ -63,7 +65,7 @@ function shareToLinkedIn() {
           
            
      
-             <div className="hero-section" style={{backgroundColor:props.bgColor}}>
+             <div className="hero-section" >
                 <div className="hero-section-container">
 
                     <div className="hero-main">
@@ -71,7 +73,8 @@ function shareToLinkedIn() {
                             <div className="hero-category"><p>{props.category}</p></div>
                             <div className="hero-popularity"><p>{props.popularity}</p></div>
                             <div className="share">
-                                <Image src={props.shareIcon} alt="" onClick={courseShare}/>
+                                <Image src={shareBlack} alt="" onClick={courseShare} className="course-share-icon-black"/>
+                                <Image src={shareWhite} alt="" onClick={courseShare} className="course-share-icon-white"/>
                             </div>
 
                         </div>

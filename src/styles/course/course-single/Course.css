@@ -2,7 +2,7 @@
     padding-top: 120px;
     display: flex;
     justify-content: center;
-    background-color: var(--uiux-bg-clr);
+    background-color: var(--landing-bg);
 }
 .hero-section-container{
     width: 80%;
@@ -10,7 +10,7 @@
     gap:2rem;
 }
 .hero-main, .hero-sub{
-    border: 2px solid #121212;
+    border: 2px solid var(--course-border);
     border-radius: 24px;
     padding: 32px;
     display: flex;
@@ -27,7 +27,7 @@
 }
 .hero-category p, .hero-popularity p{
     padding: 8px 16px;
-    color:#121212;
+    color:var(--landing-heading-clr);
     border: 1px solid #818080;
     border-radius: 8px;
     font-family:var( --p-font);
@@ -35,7 +35,7 @@
     font-size: 14px;
 }
 .hero-main-heading h1{
-    color:var(--h-text-b-clr);
+    color:var(--landing-heading-clr);
     font-family: var( --h-font);
     font-weight: 700;
     font-size: 40px;
@@ -46,7 +46,7 @@
     font-size: 16px;
     width: 80%;
     line-height: 150%;
-    color: var(--p-text-b-clr);
+    color: var(--landing-para-clr);
 }
 .hero-rating{
     display: flex;
@@ -64,29 +64,29 @@
 }
 .hero-enroll{
     padding: 8px 24px;
-    border: 2px solid #1c1623;
+    border: 2px solid var(--landing-heading-clr);
     border-radius: 8px;
-    background-color: #1c1623;
-    color:#f8f8ff;
+    background-color: var(--landing-heading-clr);
+    color:var(--landing-button-t);
     font-size: 16px;
     font-family: var(--p-font);
 }
 .hero-enroll:hover{
     background-color: inherit;
-    color:#1c1623;
+    color:var(--landing-heading-clr);
 }
 .hero-demo{
     padding: 8px 24px;
-    border: 2px solid #1c1623;
+    border: 2px solid var(--landing-heading-clr);
     border-radius: 8px;
     background-color: inherit;
-    color:#1c1623;
+    color:var(--landing-heading-clr);
     font-size: 16px;
     font-family: var(--p-font);
 }
 .hero-demo:hover{
-    background-color: #1c1623;
-    color: #f8f8ff;
+    background-color: var(--landing-heading-clr);
+    color: var(--landing-button-t);
 }
 .hero-enrolled{
     font-family: var( --p-font);
@@ -109,7 +109,7 @@
     font-family: var( --p-font);
     font-weight: 400;
     font-size: 16px;
-    color: var(--p-text-b-clr);
+    color: var(--landing-para-clr);
 }
 .platform-images{
     display: flex;
@@ -123,7 +123,7 @@
     font-family:var( --p-font);
     font-weight: 600;
     font-size: 18px;
-    color:var(--h-text-b-clr);
+    color:var(--landing-heading-clr);
 }
 
 
@@ -316,7 +316,7 @@
     padding-top: 60px;
     display: flex;
     justify-content: center;
-    background-color: var(--uiux-bg-clr);
+    background-color: var(--landing-bg);
 }
 .course-description-container{
     width: 80%;
@@ -339,14 +339,14 @@
     font-size: 24px;
     font-weight: 600;
     font-family:var( --h-font);
-    color:var(--h-text-b-clr);
+    color:var(--landing-heading-clr);
 }
 .about-course-description p{
     font-size: 16px;
     font-weight: 400px;
     font-family: var( --p-font);
     line-height: 150%;
-    color: var(--p-text-b-clr);
+    color: var(--landing-para-clr);
 }
 .course-tools{
     width: max-content;
@@ -380,7 +380,7 @@
     font-family: var( --p-font);
     line-height: 150%;
     display: flex;
-    color: var(--p-text-b-clr);
+    color: var(--landing-para-clr);
 }
 .course-skills-description li::before {
     content: "\2714"; /* Unicode tick mark character */
@@ -440,7 +440,7 @@
     padding:90px 0px;
     display: flex;
     justify-content: center;
-    background-color: var(--uiux-bg-clr);
+    background-color: var(--landing-bg);
 }
 .course-syllabus-container{
     width: 80%;
@@ -451,15 +451,15 @@
 }
 .course-syllabus-heading h2{
     font-size: 24px;
-    color:var(--h-text-b-clr);
+    color:var(--landing-heading-clr);
     font-weight: 600;
     font-family: var( --h-font);
 }
 .course-syllabus-accordion-container{
     display: flex;
     flex-direction: column;
-    border: 1px solid #e4e4e4;
-    background-color: var( --h-text-w-clr);
+    border: 1px solid var(--landing-cards-border);
+    background-color: var( --landing-cards-bg);
     border-radius: 16px;
 }
 .course-syllabus-accordion{
@@ -468,7 +468,7 @@
     display: flex;
     flex-direction: column;
     gap:1rem;
-    border-bottom:1px solid #e4e4e4 ;
+    border-bottom: 1px solid var(--landing-cards-border);
 }
 .course-syllabus-accordion:last-child{
     border-bottom: 0;
@@ -482,7 +482,7 @@
     font-size: 16px;
     font-weight: 500;
     font-family: var( --p-font);
-    color:var(--h-text-b-clr);
+    color:var(--landing-heading-clr);
 }
 .syllabus-accordion-contents p{
     padding-right: 12px;
@@ -490,7 +490,7 @@
     font-weight: 400;
     line-height: 150%;
     font-family:var( --p-font);
-    color: var(--p-text-b-clr);
+    color: var(--landing-para-clr);
 }
 .rotated {
     transform: rotate(180deg);
@@ -528,7 +528,7 @@
     display: flex;
     padding: 90px 0px;
     justify-content: center;
-    background-color: var( --h-text-w-clr);
+    background-color: var( --landing-bg);
   }
   .course-project-container{
     width: 80%;
@@ -541,7 +541,7 @@
     font-size: 24px;
     font-weight: 600;
     font-family: var( --h-font);
-    color:var(--h-text-b-clr);
+    color:var(--landing-heading-clr);
   }
   .course-projects-contents{
     display: grid;
@@ -552,8 +552,8 @@
     width: 100%;
     max-height: 350px;
     min-height: 250px;
-    border: 1px solid #e4e4e4;
-    background-color: var( --h-text-w-clr);
+    border: 1px solid var(--landing-cards-border);
+    background-color: var( --landing-cards-bg);
     border-radius: 16px;
     display: flex;
     flex-direction: column;
@@ -563,7 +563,7 @@
     border-bottom-left-radius: 0;
     border-bottom-right-radius:0 ;
     border: 0;
-    border-bottom: 1px solid #e4e4e4;
+    border-bottom: 1px solid var(--landing-cards-border);
     max-height: 170px;
     overflow: hidden;
   }
@@ -573,7 +573,7 @@
     font-weight: 600;
     font-family: var( --p-font);
     padding: 16px;
-    color:var(--h-text-b-clr);
+    color:var(--landing-heading-clr);
   }
   .project-box-description{
   }
@@ -582,7 +582,7 @@
     font-weight: 400;
     font-family: var( --p-font);
     line-height: 150%;
-    color: var(--p-text-b-clr);
+    color: var(--landing-para-clr);
   }
   .project-view-btn{
     display: flex;
@@ -632,7 +632,7 @@
     display: flex;
     justify-content: center;
     padding:90px 0px;
-    background-color: var(--uiux-bg-clr);
+    background-color: var(--landing-bg);
   }
   .course-review-container{
     width: 80%;
@@ -646,7 +646,7 @@
     font-size: 24px;
     font-weight: 600;
     font-family: var( --h-font);
-    color:var(--h-text-b-clr);
+    color:var(--landing-heading-clr);
   }
   .course-review-contents{
     display: grid;
@@ -657,8 +657,8 @@
     width: 100%;
     max-height: 350px;
     min-height: 250px;
-    border: 1px solid #e4e4e4;
-    background-color: var( --h-text-w-clr);
+    border: 1px solid var( --landing-cards-border);
+    background-color: var( --landing-cards-bg);
     border-radius: 24px;
     display: flex;
     flex-direction: column;
@@ -671,13 +671,13 @@
     font-weight: 400px;
     font-family:var( --p-font);
     line-height: 150%;
-    color: var(--p-text-b-clr);
+    color: var(--landing-para-clr);
   }
   .review-box-name p{
     font-size: 16px;
     font-weight: 500;
     font-family: var( --p-font);
-    color:var(--h-text-b-clr);
+    color:var(--landing-para-clr);
   }
  
   @media only screen and (max-width:1024px){
@@ -724,7 +724,7 @@
     display: flex;
     justify-content: center;
     padding:90px 0px;
-    background-color: var(--uiux-bg-clr);
+    background-color: var(--landing-cards-bg);
   }
   .course-certificate-container{
     width: 80%;
@@ -737,12 +737,12 @@
     font-size: 20px;
     font-weight: 600;
     font-family: var( --h-font);
-    color:var(--h-text-b-clr);
+    color:var(--landing-heading-clr);
   }
   .course-certificate-contents{
     
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     height: max-content;
     gap:2.5rem;
   }
@@ -770,7 +770,7 @@
     width: 90%;
     font-size: 16px;
     font-weight: 400;
-    color: var(--p-text-b-clr);
+    color: var(--landing-para-clr);
     font-family: var( --p-font);
     line-height: 150%;
   }
@@ -819,7 +819,7 @@
     padding:90px 0px;
     display: flex;
     justify-content: center;
-    background-color: var(--uiux-bg-clr);
+    background-color: var(--landing-bg);
 }
 .course-faq-container{
     width: 80%;
@@ -832,7 +832,7 @@
     font-size: 24px;
     font-weight: 600;
     font-family:var( --h-font);
-    color:var(--h-text-b-clr);
+    color:var(--landing-heading-clr);
 }
 .course-faq-accordion-container{
     display: flex;
@@ -844,8 +844,8 @@
     padding: 20px 24px;
     display: flex;
     flex-direction: column;
-    border: 1px solid #e4e4e4;
-    background-color: var( --h-text-w-clr);
+    border: 1px solid var(--landing-cards-border);
+    background-color: var( --landing-cards-bg);
     border-radius: 16px;
     gap:1rem;
 }
@@ -858,13 +858,13 @@
     font-size: 16px;
     font-weight: 500;
     font-family: var( --p-font);
-    color:var(--h-text-b-clr);
+    color:var(--landing-heading-clr);
 }
 .faq-accordion-contents p{
     padding-right: 12px;
     font-size: 16px;
     font-weight: 400;
-    color:var(--p-text-b-clr);
+    color:var(--landing-para-clr);
     line-height: 150%;
     font-family:var( --p-font);
 }
@@ -888,7 +888,7 @@
     padding:90px 0px;
     display: flex;
     justify-content: center;
-    background-color: var(--uiux-o-bg-clr);
+    background-color: var(--landing-bg);
 }
 .course-payment-container{
     width: 80%;
@@ -901,7 +901,7 @@
     font-size: 24px;
     font-weight: 600;
     font-family:var( --h-font);
-    color:var(--h-text-b-clr);
+    color:var(--landing-heading-clr);
 }
 .course-payment-contents{
     display: flex;
@@ -910,20 +910,21 @@
 .course-payment-box{
     width:370px;
     border-radius: 16px;
-    background-color: var( --h-text-w-clr);
+    background-color: var( --landing-cards-bg);
     display: flex;
     flex-direction: column;
     padding: 24px;
     gap:1.5rem;
-    box-shadow: 0px 0px 41px -8px rgba(213,189,255,1);
+    border: 1px solid var(--landing-cards-border);
+    /* box-shadow: 0px 0px 41px -8px rgba(213,189,255,1); */
 }
 .course-payment-box hr{
-    border: 1px solid #f5f4f4;
+    border: 1px solid var(--landing-cards-border);
 }
 .payment-month{
     width: max-content;
     padding: 8px 16px;
-    color:#121212;
+    color:var(--landing-para-clr);
     border: 1px solid #818080;
     border-radius: 8px;
     font-family: var( --p-font);
@@ -934,7 +935,7 @@
     font-size: 20px;
     font-weight: 600;
     font-family: var( --p-font);
-    color:var(--h-text-b-clr);
+    color:var(--landing-para-clr);
 }
 .payment-starting h3{
     padding-top: 8px;
@@ -947,7 +948,7 @@
     font-size: 16px;
     font-weight: 600;
     font-family: var( --p-font);
-    color:var(--h-text-b-clr);
+    color:var(--landing-heading-clr);
 }
 .payment-points li{
     padding-top: 8px;
@@ -956,24 +957,24 @@
     font-size: 16px;
     font-weight: 400;
     font-family: var( --p-font);
-    color:var(--p-text-b-clr);
+    color:var(--landing-para-clr);
 }
 .course-payment-enroll{
     margin-top: 24px;
     height: min-content;
     padding: 8px 16px;
-    border: 2px solid var(--trafy-purple);
+    border: 2px solid var(--landing-heading-clr);
     border-radius: 8px;
-    background-color: var(--trafy-purple);
-    color: var( --h-text-w-clr);
+    background-color: var(--landing-heading-clr);
+    color: var( --landing-button-t);
     font-size: 14px;
     font-weight: 400;
     font-family: var( --p-font);
     text-align: center;
 }
 .course-payment-enroll:hover{
-    background-color: var( --h-text-w-clr);
-    color: var(--trafy-purple);
+    background-color: inherit;
+    color: var(--landing-heading-clr);
     font-weight: 500px;
 }
 .course-payment-option{
@@ -986,7 +987,7 @@
     padding-top: 8px;
     font-size: 20px;
     font-weight: 600;
-    color: var(--h-text-b-clr);
+    color: var(--landing-heading-clr);
     font-family: var( --p-font);
 }
 .payment-options-container{
@@ -1002,7 +1003,7 @@
 .payment-options-topic h4{
     font-size: 16px;
     font-weight: 500;
-    color: var(--h-text-b-clr);
+    color: var(--landing-heading-clr);
     font-family: var( --p-font);
 }
 .payment-options-images{

@@ -1,9 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import '@styles/common/auth/Enquiry.css';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
+import Swal from 'sweetalert2';
 
 const EnquiryForm = () => {
     const [formData, setFormData] = useState({
@@ -11,6 +12,7 @@ const EnquiryForm = () => {
         lname: "",
         email: "",
         phone: "",
+        course: "",
         message: ""
     });
 
@@ -19,10 +21,10 @@ const EnquiryForm = () => {
         lname: "",
         email: "",
         phone: "",
+        course: "",
         message: ""
     });
 
-    const [formSubmitted, setFormSubmitted] = useState(false);
     const router = useRouter();
 
     const handleChange = (e) => {
@@ -54,13 +56,14 @@ const EnquiryForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const { fname, lname, email, phone, message } = formData;
+        const { fname, lname, email, phone, course, message } = formData;
 
         const newErrorMessages = {
             fname: !fname ? "Please enter your first name." : "",
             lname: !lname ? "Please enter your last name." : "",
             email: !email ? "Please enter your email address." : "",
             phone: !phone ? "Please enter your phone number." : "",
+            course: !course ? "Please select a course." : "",
             message: "" // No validation for the message field
         };
 
@@ -70,51 +73,59 @@ const EnquiryForm = () => {
             return;
         }
 
-        // Proceed with form submission
-        const options = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData)
-        };
+        // Show the "Thank you" popup immediately
+        Swal.fire({
+            title: 'Form Submitted',
+            text: 'Thank you for submitting the form.',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        }).then(() => {
+            router.back(); // Navigate back to the previous page
+        });
 
+        // Proceed with form submission and additional actions asynchronously
         try {
-            const res = await fetch('https://courseenquiryform-default-rtdb.firebaseio.com/EnquiryFormData.json', options);
+            const res = await fetch('https://uiux-courseenquiryform-default-rtdb.firebaseio.com/UIUX-CourseEnquiryFormData.json', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
             if (res.ok) {
-                axios.post("http://localhost:5002/course-enquiry/submit", { email},{ timeout: 10000 })
-                .then(response => {
-                    console.log(response.data);
-                    window.alert("Thank you for submitting the form.");
-                    setFormSubmitted(true); // Set formSubmitted to true to trigger navigation
-                })
-                .catch(error => {
-                    console.error(error);
-                    alert("An error occurred while sending the email notification.");
-                });
+                await axios.post("https://trafyai.com/course-enquiry/submit", {
+                    email: formData.email,
+                    fname: formData.fname,
+                    course: formData.course
+                }, { timeout: 10000 });
 
                 setFormData({
                     fname: "",
                     lname: "",
                     email: "",
                     phone: "",
+                    course: "",
                     message: ""
                 });
             } else {
-                alert("Error: " + res.status);
+                Swal.fire({
+                    title: 'Error',
+                    text: 'Error: ' + res.status,
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
             }
         } catch (error) {
             console.error('Error:', error);
-            alert("Error: " + error.message);
+            Swal.fire({
+                title: 'Error',
+                text: 'Error: ' + error.message,
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
         }
     };
-
-    useEffect(() => {
-        if (formSubmitted) {
-            router.push('/courses/uiux-course');
-            setFormSubmitted(false); // Reset formSubmitted to false for future submissions
-        }
-    }, [formSubmitted, router]);
 
     return (
         <main>
@@ -143,10 +154,15 @@ const EnquiryForm = () => {
                                 <input type="tel" placeholder="Phone Number" required className="enquiry-phone" name="phone" onChange={handleChange} value={formData.phone} />
                                 {errorMessages.phone && <p className="error-message">{errorMessages.phone}</p>}
                             </div>
-                            {/* <div className="enquirycourse">
-                                <input type="text" placeholder="Course Name " required className="enquiry-course" name="course" onChange={handleChange} value={formData.course} />
-                                {errorMessages.phone && <p className="error-message">{errorMessages.phone}</p>}
-                            </div> */}
+                            <div className="enquirycourse-container">
+                                <select className="enquiry-course" name="course" required onChange={handleChange} value={formData.course}>
+                                    <option value="">Select a Course</option>
+                                    <option value="UI/UX-Beginners ">UI/UX-Beginners</option>
+                                    <option value="UI/UX-Intermediate">UI/UX-Intermediate</option>
+                                    <option value="UI/UX-Advance">UI/UX-Advance</option>
+                                </select>
+                                {errorMessages.course && <p className="error-message">{errorMessages.course}</p>}
+                            </div>
                             <div className="enquirymessage">
                                 <textarea type="text" placeholder="Message" className="enquiry-message" name="message" style={{ width: "100%" }} value={formData.message} onChange={handleChange} />
                             </div>
@@ -156,7 +172,7 @@ const EnquiryForm = () => {
                 </div>
             </div>
         </main>
-    )
+    );
 }
 
 export default EnquiryForm;
