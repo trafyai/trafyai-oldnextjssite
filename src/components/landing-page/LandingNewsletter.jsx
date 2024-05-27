@@ -42,7 +42,7 @@ const LandingNewsletter = () => {
             }
 
              // Send email to user
-             const emailRes = await fetch('http://localhost:5002/newsletter/submit', {
+             const emailRes = await fetch('https://trafyai.com/newsletter/submit', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
