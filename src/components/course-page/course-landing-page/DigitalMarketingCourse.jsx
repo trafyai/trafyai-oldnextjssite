@@ -1,22 +1,24 @@
 import React from "react"
-import CourseData from "@api/course/course-landing/CourseData";
+import {dmCourse} from '@api/course/course-landing/CourseData/'
 import '@styles/course/course-landing/CourseLanding.css';
 import Link from "next/link";
 import Image from "next/image";
 
-export default function CourseLandingPage(){
+export default function DigitalMarketingCourse(){
     return(
         <div >
       
          <main>
             <div className="course-landing-ai">
-                {/* Map over each course array */}
-                {CourseData.map((courseArray, index) => (
-                    // Map over each course object inside the course array
-                    courseArray.map((item, subIndex) => (
-                        <div className="course-landing-ai-container" key={`${index}-${subIndex}`}>
-                            <div className="course-landing-ai-heading"><h2>{item.title} Course</h2></div>
-                            <div className="course-landing-ai-box-container">
+                      <div className="course-landing-ai-container">
+                      <div className="course-landing-ai-heading"><h2>  Digital Marketing Course</h2></div>
+                        </div>
+                  
+                        <div className="course-landing-ai-container">
+                            
+
+                            { dmCourse.map((item, index) => (
+                            <div className="course-landing-ai-box-container" key={index}>
                             
                                 <Link href={`/courses/${item.id}`} className="course-landing-ai-box" key={item.id}>
             
@@ -59,9 +61,10 @@ export default function CourseLandingPage(){
                                 </Link>
                                 
                             </div>
+                        ))}
                         </div>
-                    ))
-                ))}
+                   
+              
             </div>
         </main>
         

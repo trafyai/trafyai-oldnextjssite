@@ -17,8 +17,8 @@
 .course-landing-ai-container{
     width: 80%;
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    flex-wrap: wrap;
+    gap: 3rem;
 }
 .course-landing-ai-heading h2{
     padding-top: 8px;

@@ -116,9 +116,7 @@
     .blog-landing-container{
         width: 95%;
     }
-    .blog-landing-card {
-        padding: 16px;
-    }
+   
     .blog-landing-card-category, .blog-landing-card-author{
         gap:1rem;
     }

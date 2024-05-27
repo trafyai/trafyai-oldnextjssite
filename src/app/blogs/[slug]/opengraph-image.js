@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
-import BlogSingleData from '@api/blog/BlogSingleData'; // Assuming this fetches blog data
+import BlogSingleData from '@api/blog/BlogSingleData';
  
-// Image metadata
+
 export const alt = 'About Acme'
 export const size = {
   width: 1200,
@@ -17,37 +17,7 @@ export default async function Image({ params }) {
    
     return new ImageResponse(
       (
-        // <div
-        //   style={{
-        //     fontSize: 48,
-        //     background: product.bgcolor,
-        //     width: '100%',
-        //     height: '100%',
-        //     display: 'flex',
-        //     alignItems: 'center',
-        //     justifyContent: 'center',
-        //    padding:'40px'
-            
-        //   }}
-        // >
-        // <h2 style={{
-        //     fontSize:'60px',
-        //     fontWeight:'bold',
-        //     fontFamily:'Inter',
-        //     textAlign:'center',
-        //     lineHeight:'150%'
-            
-        //     }}>
-                
-
-        // {product.title}
-
-        // </h2>
-        
-
-        
-        
-        // </div>
+       
 <img src={product.metaImage} alt="img"/>
 
       ),

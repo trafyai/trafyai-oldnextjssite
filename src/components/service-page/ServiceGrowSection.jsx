@@ -47,7 +47,7 @@ function ServiceGrowSection() {
           </div>
           <div className="service-grow-content">
             {ServiceData.map((section, index) => (
-              <div key={section.id}>
+              <div key={section.id} style={{display:"flex",flexDirection:"column",alignItems:"center",gap:"1rem"}}>
                 <div className={index === activeIndex ? 'serviceActive' : ''}>
                   {index === activeIndex && (
                     <div className="service-grow-image">

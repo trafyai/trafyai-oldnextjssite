@@ -79,12 +79,72 @@ const CourseHeroData=[
 
     },
     {
-        id:"uiux-course",
+        id:"uiux-course-beginner",
         bgColor:"#f9f7ff",
         category:"UI/UX",
         popularity:"Popular",
         shareIcon:Share,
-        courseHeading:"Learn Advanced AI Powered UX/UX design with Figma",
+        courseHeading:"Learn Advanced AI Powered UI/UX design with Figma",
+        courseDescription:"Explore the principles, material guidelines and core concepts behind cross platform responsive UI/UX development process.",
+        rating:"4.8",
+        ratingIcon:RatingStar,
+        enrolled:"126 Enrolled in last week",
+        whatsappIcon:Whatsapp,
+        facebookIcon:Facebook,
+        linkedinIcon:Linkedin,
+        xIcon:X,
+        closeIcon:close,
+        platform:"Learn",
+        iphoneIcon:Phone,
+        macIcon:Macbook,
+        tabIcon:"",
+        visionICon:"",
+        watchIcon:"",
+        startDateH:"Start date",
+        startDate:"April 25, 2024",
+        levelH:"Level",
+        level:"Beginner",
+        durationH:"Duration",
+        duration:"4 weeks"
+
+    },
+    {
+        id:"uiux-course-intermediate",
+        bgColor:"#f9f7ff",
+        category:"UI/UX",
+        popularity:"Popular",
+        shareIcon:Share,
+        courseHeading:"Learn Advanced AI Powered UI/UX design with Figma",
+        courseDescription:"Explore the principles, material guidelines and core concepts behind cross platform responsive UI/UX development process.",
+        rating:"4.8",
+        ratingIcon:RatingStar,
+        enrolled:"126 Enrolled in last week",
+        whatsappIcon:Whatsapp,
+        facebookIcon:Facebook,
+        linkedinIcon:Linkedin,
+        xIcon:X,
+        closeIcon:close,
+        platform:"Learn",
+        iphoneIcon:Phone,
+        macIcon:Macbook,
+        tabIcon:Tab,
+        visionICon:"",
+        watchIcon:Watch,
+        startDateH:"Start date",
+        startDate:"April 25, 2024",
+        levelH:"Level",
+        level:"Intermediate",
+        durationH:"Duration",
+        duration:"8 weeks"
+
+    },
+    {
+        id:"uiux-course-advanced",
+        bgColor:"#f9f7ff",
+        category:"UI/UX",
+        popularity:"Popular",
+        shareIcon:Share,
+        courseHeading:"Learn Advanced AI Powered UI/UX design with Figma",
         courseDescription:"Explore the principles, material guidelines and core concepts behind cross platform responsive UI/UX development process.",
         rating:"4.8",
         ratingIcon:RatingStar,
@@ -105,7 +165,7 @@ const CourseHeroData=[
         levelH:"Level",
         level:"Advanced",
         durationH:"Duration",
-        duration:"4 weeks"
+        duration:"12 weeks"
 
     }
 ]
@@ -138,7 +198,57 @@ const CourseAboutData=[
         ]
     },
     {
-        id:"uiux-course",
+        id:"uiux-course-beginner",
+        bgColor:"#f9f7ff",
+        aboutH:"About the Course",
+        description:"Advanced AI Powered UX/UX design curriculum is built on deep core values like user research, usability, testing, designing for modern technologies like Wear OS and Vision OS. Our strategic gamified learning process helps you gain foundational knowledge and build diversified projects for your portfolio.",
+        toolsH:"Tools Covered",
+        toolsimg:[
+            {url:Figma,alt:"Figma"},
+            {url:Miro,alt:"Miro"},
+            {url:Chatgpt,alt:"Chatgpt"},
+            {url:Gemini,alt:"Gemini"},
+            {url:Framer,alt:"Framer"} 
+
+        ],
+        
+        skillsH:"Skills you will Master",
+        skillP:[
+            "Emotional Design",
+            " Spatial Design ",
+            " Accessibility and Inclusive Design ",
+            " Designing for Virtual Reality",
+            "Creating Dynamic User Experience",
+            "Designing for Conversation AI’s"
+        ]
+    },
+    {
+        id:"uiux-course-intermediate",
+        bgColor:"#f9f7ff",
+        aboutH:"About the Course",
+        description:"Advanced AI Powered UX/UX design curriculum is built on deep core values like user research, usability, testing, designing for modern technologies like Wear OS and Vision OS. Our strategic gamified learning process helps you gain foundational knowledge and build diversified projects for your portfolio.",
+        toolsH:"Tools Covered",
+        toolsimg:[
+            {url:Figma,alt:"Figma"},
+            {url:Miro,alt:"Miro"},
+            {url:Chatgpt,alt:"Chatgpt"},
+            {url:Gemini,alt:"Gemini"},
+            {url:Framer,alt:"Framer"} 
+
+        ],
+        
+        skillsH:"Skills you will Master",
+        skillP:[
+            "Emotional Design",
+            " Spatial Design ",
+            " Accessibility and Inclusive Design ",
+            " Designing for Virtual Reality",
+            "Creating Dynamic User Experience",
+            "Designing for Conversation AI’s"
+        ]
+    },
+    {
+        id:"uiux-course-advanced",
         bgColor:"#f9f7ff",
         aboutH:"About the Course",
         description:"Advanced AI Powered UX/UX design curriculum is built on deep core values like user research, usability, testing, designing for modern technologies like Wear OS and Vision OS. Our strategic gamified learning process helps you gain foundational knowledge and build diversified projects for your portfolio.",
@@ -205,7 +315,101 @@ const CourseSyllabusData=[
         ]
     },
     {
-        id:"uiux-course",
+        id:"uiux-course-beginner",
+        bgColor:"#f9f7ff",
+        viewMore:"#6d28d9",
+        hoverColor:"1c1623",
+        heading:"Course Syllabus",
+        dropIcon:ExpandMore,
+        syllabus:[
+        {title:"Introduction to UI/UX",
+         contents:"Understand the fundamentals of user interface and experience design and explore the importance of user research, usability testing, and user personas in the design process."
+        },
+        {title:"Typography, Colors & Components",
+         contents:"Learn how to effectively use typography, color theory, and UI components to create visually appealing and user-friendly interfaces, with a focus on consistency, hierarchy, and readability."
+        },
+        {title:"User flow, Wireframing and Building a Landing Page",
+        contents:"Learn the process of designing user flows, creating wireframes, and implementing them to build a functional landing page, emphasising usability and user-centric design principles."
+        },
+        {title:"Concepts of 21 Design",
+        contents:"Explore emerging design trends and concepts shaping the digital landscape, including responsive design, micro-interactions, and minimalist design principles, to stay ahead in the rapidly evolving field of UI/UX."
+        },
+        {title:"Core Principles of UX & UX Adaption for Evolving Trends",
+        contents:"Delve into the core principles of UX design and learn how to adapt them to changing trends and user behaviors, ensuring designs remain relevant and effective over time."
+        },
+        {title:"Data Visualization & Data Driven Design",
+        contents:"Explore the techniques for visualizing data effectively in user interfaces and leveraging data-driven design principles to create personalized and intuitive user experiences."
+        },
+        {title:"Mobile UX Concepts",
+        contents:" Understand the unique considerations and best practices for designing user experiences on mobile devices, including responsive design, touch interactions, and mobile-first design approaches."
+        },
+        {title:"Visual Design & Journey Mapping",
+        contents:"Learn how to use visual design elements effectively and map user journeys to create cohesive and engaging experiences across different touchpoints and channels."
+        },
+        {title:"Emotional Design & Spatial Design",
+        contents:"Explore the psychological aspects of design, including emotional design principles and spatial considerations, to create immersive and memorable user experiences that resonate with users on a deeper level."
+        },
+        {title:"Accessibility and Inclusive Design",
+        contents:"Understand the importance of designing for accessibility and inclusivity, including techniques for making digital products usable for people with disabilities and diverse user groups."
+        },
+        {title:"Designing for Virtual Reality & Designing for Conversation AI’s",
+        contents:" Learn the principles and best practices for designing immersive virtual reality experiences and conversational interfaces, including considerations for interaction design and user engagement."
+        },
+        {title:"Creating a Dynamic User Experience",
+        contents:" Learn advanced techniques for creating dynamic and interactive user experiences, including animation, gamification, and personalization, to captivate users and drive engagement."
+        },
+         
+        ]
+    },
+    {
+        id:"uiux-course-intermediate",
+        bgColor:"#f9f7ff",
+        viewMore:"#6d28d9",
+        hoverColor:"1c1623",
+        heading:"Course Syllabus",
+        dropIcon:ExpandMore,
+        syllabus:[
+        {title:"Introduction to UI/UX",
+         contents:"Understand the fundamentals of user interface and experience design and explore the importance of user research, usability testing, and user personas in the design process."
+        },
+        {title:"Typography, Colors & Components",
+         contents:"Learn how to effectively use typography, color theory, and UI components to create visually appealing and user-friendly interfaces, with a focus on consistency, hierarchy, and readability."
+        },
+        {title:"User flow, Wireframing and Building a Landing Page",
+        contents:"Learn the process of designing user flows, creating wireframes, and implementing them to build a functional landing page, emphasising usability and user-centric design principles."
+        },
+        {title:"Concepts of 21 Design",
+        contents:"Explore emerging design trends and concepts shaping the digital landscape, including responsive design, micro-interactions, and minimalist design principles, to stay ahead in the rapidly evolving field of UI/UX."
+        },
+        {title:"Core Principles of UX & UX Adaption for Evolving Trends",
+        contents:"Delve into the core principles of UX design and learn how to adapt them to changing trends and user behaviors, ensuring designs remain relevant and effective over time."
+        },
+        {title:"Data Visualization & Data Driven Design",
+        contents:"Explore the techniques for visualizing data effectively in user interfaces and leveraging data-driven design principles to create personalized and intuitive user experiences."
+        },
+        {title:"Mobile UX Concepts",
+        contents:" Understand the unique considerations and best practices for designing user experiences on mobile devices, including responsive design, touch interactions, and mobile-first design approaches."
+        },
+        {title:"Visual Design & Journey Mapping",
+        contents:"Learn how to use visual design elements effectively and map user journeys to create cohesive and engaging experiences across different touchpoints and channels."
+        },
+        {title:"Emotional Design & Spatial Design",
+        contents:"Explore the psychological aspects of design, including emotional design principles and spatial considerations, to create immersive and memorable user experiences that resonate with users on a deeper level."
+        },
+        {title:"Accessibility and Inclusive Design",
+        contents:"Understand the importance of designing for accessibility and inclusivity, including techniques for making digital products usable for people with disabilities and diverse user groups."
+        },
+        {title:"Designing for Virtual Reality & Designing for Conversation AI’s",
+        contents:" Learn the principles and best practices for designing immersive virtual reality experiences and conversational interfaces, including considerations for interaction design and user engagement."
+        },
+        {title:"Creating a Dynamic User Experience",
+        contents:" Learn advanced techniques for creating dynamic and interactive user experiences, including animation, gamification, and personalization, to captivate users and drive engagement."
+        },
+         
+        ]
+    },
+    {
+        id:"uiux-course-advanced",
         bgColor:"#f9f7ff",
         viewMore:"#6d28d9",
         hoverColor:"1c1623",
@@ -288,7 +492,72 @@ const CourseProjectData=[
          ]
     },
     {
-        id:"uiux-course",
+        id:"uiux-course-beginner",
+        heading:"Projects",
+        bgColor:"#d9cefb",
+        project:[
+           
+            {
+                title:"Ecommerce Web App",
+                description:"Develop a robust e-commerce app with intuitive navigation, seamless checkout, and personalized product recommendations for effortless online shopping.",
+                bg_color:""
+            },
+            {
+                title:"Fitness Smartwatch App",
+                description:"Design a dynamic fitness app for smartwatches, featuring customizable workouts and real-time activity tracking to empower users to reach their fitness goals.",
+                bg_color:""
+            },
+            {
+                title:"Payments Mobile App",
+                description:"Create an intuitive, secure mobile app for payments, with streamlined user flows and real-time transaction tracking for convenient financial management.",
+                bg_color:""
+            },
+            {
+                title:"Spatial Web Design ",
+                description:"Create an immersive and visually captivating spatial web design for streaming platforms, similar to the seamless experience offered by Netflix.",
+                bg_color:""
+            }
+         ]
+    },
+    {
+        id:"uiux-course-intermediate",
+        heading:"Projects",
+        bgColor:"#d9cefb",
+        project:[
+            {
+                title:"Agency Landing Page ",
+                description:"Craft a sleek, professional landing page showcasing your services or agency expertise, with clear calls-to-action to drive conversions.",
+                bg_color:""
+            },
+            {
+                title:"Blog Website",
+                description:"Design a user-friendly, visually appealing blog with seamless navigation and engaging content presentation for an immersive reader experience.",
+                bg_color:""
+            },
+            {
+                title:"Ecommerce Web App",
+                description:"Develop a robust e-commerce app with intuitive navigation, seamless checkout, and personalized product recommendations for effortless online shopping.",
+                bg_color:""
+            },
+            {
+                title:"Fitness Smartwatch App",
+                description:"Design a dynamic fitness app for smartwatches, featuring customizable workouts and real-time activity tracking to empower users to reach their fitness goals.",
+                bg_color:""
+            },
+            {
+                title:"Payments Mobile App",
+                description:"Create an intuitive, secure mobile app for payments, with streamlined user flows and real-time transaction tracking for convenient financial management.",
+                bg_color:""
+            },
+            {
+                title:"Spatial Web Design ",
+                description:"Create an immersive and visually captivating spatial web design for streaming platforms, similar to the seamless experience offered by Netflix.",
+                bg_color:""
+            }
+         ]
+    },
+    {
+        id:"uiux-course-advanced",
         heading:"Projects",
         bgColor:"#d9cefb",
         project:[
@@ -339,7 +608,29 @@ const CourseReviewData=[
         ]
     },
     {
-        id:"uiux-course",
+        id:"uiux-course-beginner",
+        bgColor:"#f9f7ff",
+        heading:"Reviews",
+        review:[
+            { name: "Karthik Raj", content: "This course exceeded my expectations! The instructors provided clear explanations and practical exercises that helped me level up my design skills. Highly recommended for anyone serious about pursuing a career in UI/UX design." },
+            {name: "Payal Singh", content: "As someone with a background in graphic design, I found this course to be valuable in expanding my skill set. The lessons on user research and prototyping were especially too good. I feel more confident in my ability to create designs that not only look great but also prioritize user needs." },
+            { name: "Deepanjali", content: "I've taken several online courses on UI/UX design, but none have been as comprehensive and engaging as this one. The instructors break down complex concepts, making it easy to follow along. Plus, the projects are fun and challenging—I've already started building my portfolio!" },
+            
+        ]
+    },
+    {
+        id:"uiux-course-intermediate",
+        bgColor:"#f9f7ff",
+        heading:"Reviews",
+        review:[
+            { name: "Karthik Raj", content: "This course exceeded my expectations! The instructors provided clear explanations and practical exercises that helped me level up my design skills. Highly recommended for anyone serious about pursuing a career in UI/UX design." },
+            {name: "Payal Singh", content: "As someone with a background in graphic design, I found this course to be valuable in expanding my skill set. The lessons on user research and prototyping were especially too good. I feel more confident in my ability to create designs that not only look great but also prioritize user needs." },
+            { name: "Deepanjali", content: "I've taken several online courses on UI/UX design, but none have been as comprehensive and engaging as this one. The instructors break down complex concepts, making it easy to follow along. Plus, the projects are fun and challenging—I've already started building my portfolio!" },
+            
+        ]
+    },
+    {
+        id:"uiux-course-advanced",
         bgColor:"#f9f7ff",
         heading:"Reviews",
         review:[
@@ -360,7 +651,21 @@ const CourseCertificateData=[
         description:"Add this credential to your LinkedIn profile, resume, or CV to showcase your expertise. Share your achievement on social media and during performance reviews to underscore your commitment to professional growth and success."
     },
     {
-        id:"uiux-course",
+        id:"uiux-course-beginner",
+        bgColor:"#f9f7ff",
+        image:uiuxcertificate,
+        heading:"Earn Industry Recognised Certificate",
+        description:"Add this credential to your LinkedIn profile, resume, or CV to showcase your expertise. Share your achievement on social media and during performance reviews to underscore your commitment to professional growth and success."
+    },
+    {
+        id:"uiux-course-intermediate",
+        bgColor:"#f9f7ff",
+        image:uiuxcertificate,
+        heading:"Earn Industry Recognised Certificate",
+        description:"Add this credential to your LinkedIn profile, resume, or CV to showcase your expertise. Share your achievement on social media and during performance reviews to underscore your commitment to professional growth and success."
+    },
+    {
+        id:"uiux-course-advanced",
         bgColor:"#f9f7ff",
         image:uiuxcertificate,
         heading:"Earn Industry Recognised Certificate",
@@ -415,7 +720,7 @@ const CoursePaymentData=[
 
     },
     {
-        id:"uiux-course",
+        id:"uiux-course-beginner",
         bgColor:"#f4f0ff",
         shadowColor:"0px 0px 41px -8px #d5bdff",
         feeH:"Course Fee",
@@ -456,8 +761,96 @@ const CoursePaymentData=[
         
             }
         ]
+    },
+{
+    id:"uiux-course-intermediate",
+    bgColor:"#f4f0ff",
+    shadowColor:"0px 0px 41px -8px #d5bdff",
+    feeH:"Course Fee",
+    weeks:"3 weeks",
+    start:"Starting at",
+    rate:"INR 29,000",
+    sub:"Including",
+    sublist:[
+        {list:"Lifetime access to course materials"},
+        {list:"Doubt clearing sessions"},
+        {list:"Career guidance and Mock Interviews"}
+    ],
+    paymentH:"Payment options",
+    payment:[
+        {heading:"UPI",
+        images:[
+            {image:Gpay,alt:"Gpay"},
+             {image:PhonePe,alt:"Phonepe"},
+             {image:Upi,alt:"Upi"}
+        ]
+    
+        },
+        {heading:"Card",
+        images:[
+             {image:Mastercard,alt:"Mastercard"},
+             {image:Rupay,alt:"Rupay"},
+             {image:Visa,alt:"Visa"}
+        ]
+    
+        },
+        {heading:"Wallet",
+        images:[
+             {image:Freecharge,alt:"Freecharge"},
+             {image:Mobikwik,alt:"Mobikwik"},
+             {image:Ola,alt:"Ola"},
+             {image:Jio,alt:"Jio"}
+        ]
+    
+        }
+    ]
 
-    }
+},
+{
+    id:"uiux-course-advanced",
+    bgColor:"#f4f0ff",
+    shadowColor:"0px 0px 41px -8px #d5bdff",
+    feeH:"Course Fee",
+    weeks:"3 weeks",
+    start:"Starting at",
+    rate:"INR 60,000",
+    sub:"Including",
+    sublist:[
+        {list:"Lifetime access to course materials"},
+        {list:"Doubt clearing sessions"},
+        {list:"Career guidance and Mock Interviews"}
+    ],
+    paymentH:"Payment options",
+    payment:[
+        {heading:"UPI",
+        images:[
+            {image:Gpay,alt:"Gpay"},
+             {image:PhonePe,alt:"Phonepe"},
+             {image:Upi,alt:"Upi"}
+        ]
+    
+        },
+        {heading:"Card",
+        images:[
+             {image:Mastercard,alt:"Mastercard"},
+             {image:Rupay,alt:"Rupay"},
+             {image:Visa,alt:"Visa"}
+        ]
+    
+        },
+        {heading:"Wallet",
+        images:[
+             {image:Freecharge,alt:"Freecharge"},
+             {image:Mobikwik,alt:"Mobikwik"},
+             {image:Ola,alt:"Ola"},
+             {image:Jio,alt:"Jio"}
+        ]
+    
+        }
+    ]
+
+}
+
 ]
 
 
@@ -483,7 +876,53 @@ const CourseFaqData=[
         ]
     },
     {
-        id:"uiux-course",
+        id:"uiux-course-beginner",
+        bgColor:"#f9f7ff",
+        dropIcon:ExpandMore,
+        heading:"Frequently asked questions",
+        faq:[
+        {title:"Is this course suitable for beginners?",
+         contents:"Absolutely! Whether you're new to design or looking to enhance your existing skills, this course caters to students of all levels."
+        },
+        {title:"Will I receive a certificate upon completion of the course?",
+         contents:"Yes, upon successful completion of the course, you will receive a certificate to showcase your skills and knowledge in UI/UX design."
+        },
+        {title:"Can I access the course materials after I finish the course?",
+        contents:"Yes, you will have lifetime access to all course materials, including lectures, assignments, and resources. This allows you to revisit content and continue learning at your own pace even after completing the course."
+        },
+        {title:"What career opportunities can I pursue after completing this course?",
+        contents:"Yes! Our course is designed to accommodate busy schedules. With flexible learning options, you can balance your coursework with your professional commitments."
+        },
+        {title:"Can I enroll in this course if I'm currently employed full-time?",
+        contents:"Yes, participants will engage in practical exercises and projects throughout the course to reinforce learning and apply digital marketing concepts in real-world scenarios."
+        },
+        ]
+    },
+    {
+        id:"uiux-course-intermediate",
+        bgColor:"#f9f7ff",
+        dropIcon:ExpandMore,
+        heading:"Frequently asked questions",
+        faq:[
+        {title:"Is this course suitable for beginners?",
+         contents:"Absolutely! Whether you're new to design or looking to enhance your existing skills, this course caters to students of all levels."
+        },
+        {title:"Will I receive a certificate upon completion of the course?",
+         contents:"Yes, upon successful completion of the course, you will receive a certificate to showcase your skills and knowledge in UI/UX design."
+        },
+        {title:"Can I access the course materials after I finish the course?",
+        contents:"Yes, you will have lifetime access to all course materials, including lectures, assignments, and resources. This allows you to revisit content and continue learning at your own pace even after completing the course."
+        },
+        {title:"What career opportunities can I pursue after completing this course?",
+        contents:"Yes! Our course is designed to accommodate busy schedules. With flexible learning options, you can balance your coursework with your professional commitments."
+        },
+        {title:"Can I enroll in this course if I'm currently employed full-time?",
+        contents:"Yes, participants will engage in practical exercises and projects throughout the course to reinforce learning and apply digital marketing concepts in real-world scenarios."
+        },
+        ]
+    },
+    {
+        id:"uiux-course-advanced",
         bgColor:"#f9f7ff",
         dropIcon:ExpandMore,
         heading:"Frequently asked questions",

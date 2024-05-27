@@ -86,15 +86,6 @@ function Header({ initialTheme }) { // Add initialTheme prop here
           <div className="header-contents-first">
             <button className="header-academy" onClick={handleNavigation}><Link href="/courses">Courses</Link></button>
             <button className="header-resources" onClick={handleNavigation}><Link href="/blogs"> Resources </Link></button>
-            {/* <div className="header-theme" onClick={themeDropDown}>
-              <p>Theme</p>
-              {dropTheme &&
-              <div className='header-theme-drop'>
-                <div className='header-theme-drop-item' onClick={lthemeChange}><Image src={Light}/><p>Light theme</p> </div>
-                <div className='header-theme-drop-item' onClick={dthemeChange}><Image src={Dark}/><p>Dark theme</p> </div>
-              </div>
-              }
-            </div> */}
           </div>
 
           <div className="header-contents-second">

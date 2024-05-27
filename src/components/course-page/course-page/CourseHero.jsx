@@ -119,11 +119,11 @@ function shareToLinkedIn() {
                         <div className="hero-platform">
                             <div className="platform-heading"><p>{props.platform}</p></div>
                             <div className="platform-images">
-                                <Image src={props.iphoneIcon} alt="iphone" />
-                                <Image src={props.macIcon} alt="imac" />
-                                <Image src={props.tabIcon} alt="ipad" />
-                                <Image src={props.visionICon} alt="vison" />
-                                <Image src={props.watchIcon} alt="iwatch" />
+                            {props.iphoneIcon &&   <Image src={props.iphoneIcon} alt="iphone" />}
+                            {props.macIcon && <Image src={props.macIcon} alt="imac" />}
+                            {props.tabIcon && <Image src={props.tabIcon} alt="ipad" />}
+                            {props.visionICon && <Image src={props.visionICon} alt="vison" />}
+                            {props.watchIcon &&  <Image src={props.watchIcon} alt="iwatch" />}
 
                             </div>
                         </div>

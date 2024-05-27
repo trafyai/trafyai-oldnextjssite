@@ -1,5 +1,7 @@
 import React from 'react';
-import CoursePage from '@components/course-page/course-landing-page/CoursesPage';
+import UiuxCourse from '@components/course-page/course-landing-page/UiuxCourse';
+import DigitalMarketingCourse from '@components/course-page/course-landing-page/DigitalMarketingCourse';
+import ArtificialIntelligenceCourse from '@components/course-page/course-landing-page/ArtificialIntelligenceCourse';
 import Head from 'next/head';
 
 const Course = () => {
@@ -8,7 +10,9 @@ const Course = () => {
       <Head>
         <meta name="robots" content="noindex" />
       </Head>
-        <CoursePage/>
+        <UiuxCourse/>
+        <DigitalMarketingCourse/>
+        <ArtificialIntelligenceCourse/>
     </div>
   )
 }

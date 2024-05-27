@@ -25,7 +25,12 @@
 
     --dom-black:#1c1623;
   
-    --landing-bg:#f8f8ff;
+   /* ==================header====================== */
+    --header-border:#dfdfdf;
+
+
+    /* --landing-bg:#f8f8ff; */
+    --landing-bg:#fcfcfc;
     /* --landing-cards-bg:#322a3b; */
     --landing-cards-bg:#fcfefe;
     --landing-heading-clr:#1c1623;
@@ -36,7 +41,7 @@
     /* --landing-cards-border:#dedede; */
 
     --landing-cards-border:#dedede;
-    --landing-cards-bg:#fcfefe;
+    --landing-cards-bg:#ffffff; /*fcfefe*/
     
   }
   [data-theme='dark'] {
@@ -45,6 +50,12 @@
     --p-black:#666464;
     --h-white:#f8f8ff;
     --p-white:#c7c1d1;
+
+
+   /* ==================header====================== */
+   --header-border:#353535;
+
+
 
     /* landing-page */
     --landing-bg:#1c1623;

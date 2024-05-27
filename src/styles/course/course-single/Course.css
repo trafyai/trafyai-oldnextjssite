@@ -64,28 +64,28 @@
 }
 .hero-enroll{
     padding: 8px 24px;
-    border: 2px solid var(--trafy-purple);
+    border: 2px solid #1c1623;
     border-radius: 8px;
-    background-color: var(--trafy-purple);
+    background-color: #1c1623;
     color:#f8f8ff;
     font-size: 16px;
     font-family: var(--p-font);
 }
 .hero-enroll:hover{
     background-color: inherit;
-    color: var(--trafy-purple);
+    color:#1c1623;
 }
 .hero-demo{
     padding: 8px 24px;
-    border: 2px solid var(--trafy-purple);
+    border: 2px solid #1c1623;
     border-radius: 8px;
     background-color: inherit;
-    color:var(--trafy-purple);
+    color:#1c1623;
     font-size: 16px;
     font-family: var(--p-font);
 }
 .hero-demo:hover{
-    background-color: var(--trafy-purple);
+    background-color: #1c1623;
     color: #f8f8ff;
 }
 .hero-enrolled{
@@ -194,8 +194,9 @@
     .start-date p, .level p, .duration p{
         font-size: 18px;
     }
-    .hero-enroll{
-        width: max-content;
+    .hero-enroll,.hero-demo{
+        width:100%;
+        text-align: center;
     }
 }
 @media only screen and (max-width:480px){
