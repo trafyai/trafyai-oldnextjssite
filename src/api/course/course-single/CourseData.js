@@ -248,7 +248,7 @@ const CourseAboutData=[
         ]
     },
     {
-        id:"Spatial and Immersive UIUX Design",
+        id:"Spatial-and-Immersive-UIUX-Design",
         bgColor:"#f9f7ff",
         aboutH:"About the Course",
         description:"Advanced AI Powered UX/UX design curriculum is built on deep core values like user research, usability, testing, designing for modern technologies like Wear OS and Vision OS. Our strategic gamified learning process helps you gain foundational knowledge and build diversified projects for your portfolio.",
@@ -375,7 +375,7 @@ const CourseSyllabusData=[
         ]
     },
     {
-        id:"Spatial and Immersive UIUX Design",
+        id:"Spatial-and-Immersive-UIUX-Design",
         bgColor:"#f9f7ff",
         viewMore:"#6d28d9",
         hoverColor:"1c1623",
@@ -504,7 +504,7 @@ const CourseProjectData=[
          ]
     },
     {
-        id:"Spatial and Immersive UIUX Design",
+        id:"Spatial-and-Immersive-UIUX-Design",
         heading:"Projects",
         bgColor:"#d9cefb",
         project:[
@@ -578,7 +578,7 @@ const CourseReviewData=[
         ]
     },
     {
-        id:"Spatial and Immersive UIUX Design",
+        id:"Spatial-and-Immersive-UIUX-Design",
         bgColor:"#f9f7ff",
         heading:"Reviews",
         review:[
@@ -613,7 +613,7 @@ const CourseCertificateData=[
         description:"Add this credential to your LinkedIn profile, resume, or CV to showcase your expertise. Share your achievement on social media and during performance reviews to underscore your commitment to professional growth and success."
     },
     {
-        id:"Spatial and Immersive UIUX Design",
+        id:"Spatial-and-Immersive-UIUX-Design",
         bgColor:"#f9f7ff",
         image:uiuxcertificate,
         heading:"Earn Industry Recognised Certificate",
@@ -755,7 +755,7 @@ const CoursePaymentData=[
 
 },
 {
-    id:"Spatial and Immersive UIUX Design",
+    id:"Spatial-and-Immersive-UIUX-Design",
     bgColor:"#f4f0ff",
     shadowColor:"0px 0px 41px -8px #d5bdff",
     feeH:"Course Fee",
@@ -870,7 +870,7 @@ const CourseFaqData=[
         ]
     },
     {
-        id:"Spatial and Immersive UIUX Design",
+        id:"Spatial-and-Immersive-UIUX-Design",
         bgColor:"#f9f7ff",
         dropIcon:ExpandMore,
         heading:"Frequently asked questions",
