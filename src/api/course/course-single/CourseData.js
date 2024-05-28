@@ -79,7 +79,7 @@ const CourseHeroData=[
 
     },
     {
-        id:"uiux-course-beginner",
+        id:"Introduction-to-Responsive-UI-Design",
         bgColor:"#f9f7ff",
         category:"UI/UX",
         popularity:"Popular",
@@ -109,7 +109,7 @@ const CourseHeroData=[
 
     },
     {
-        id:"uiux-course-intermediate",
+        id:"Design-and-Develop-Multi-Device-UIUX",
         bgColor:"#f9f7ff",
         category:"UI/UX",
         popularity:"Popular",
@@ -139,7 +139,7 @@ const CourseHeroData=[
 
     },
     {
-        id:"uiux-course-advanced",
+        id:"Spatial-and-Immersive-UIUX-Design",
         bgColor:"#f9f7ff",
         category:"UI/UX",
         popularity:"Popular",
@@ -198,10 +198,10 @@ const CourseAboutData=[
         ]
     },
     {
-        id:"uiux-course-beginner",
+        id:"Introduction-to-Responsive-UI-Design",
         bgColor:"#f9f7ff",
         aboutH:"About the Course",
-        description:"Advanced AI Powered UX/UX design curriculum is built on deep core values like user research, usability, testing, designing for modern technologies like Wear OS and Vision OS. Our strategic gamified learning process helps you gain foundational knowledge and build diversified projects for your portfolio.",
+        description:"Introduction to Responsive UI Design course provides a structured journey through fundamental principles and practical techniques for creating engaging digital experiences. From user-centered design basics to advanced topics like the latest trends, you'll master typography, colors, user flows, wireframing, and landing page development.",
         toolsH:"Tools Covered",
         toolsimg:[
             {url:Figma,alt:"Figma"},
@@ -214,19 +214,19 @@ const CourseAboutData=[
         
         skillsH:"Skills you will Master",
         skillP:[
-            "Emotional Design",
-            " Spatial Design ",
-            " Accessibility and Inclusive Design ",
-            " Designing for Virtual Reality",
-            "Creating Dynamic User Experience",
-            "Designing for Conversation AI’s"
+            "Typography",
+            " Colour mastery",
+            "UI Component Creation",
+            "User Flow",
+            "Wire Framing",
+            "Landing Page Development"
         ]
     },
     {
-        id:"uiux-course-intermediate",
+        id:"Design-and-Develop-Multi-Device-UIUX",
         bgColor:"#f9f7ff",
         aboutH:"About the Course",
-        description:"Advanced AI Powered UX/UX design curriculum is built on deep core values like user research, usability, testing, designing for modern technologies like Wear OS and Vision OS. Our strategic gamified learning process helps you gain foundational knowledge and build diversified projects for your portfolio.",
+        description:"Design and Develop Multi-Device UI/UX Course begins with foundational concepts like user-centric design to advanced topics such as data-driven design and mobile UX, you'll gain a diverse skill set. Learn the latest design trends and core UX principles adaptable to evolving trends. ",
         toolsH:"Tools Covered",
         toolsimg:[
             {url:Figma,alt:"Figma"},
@@ -239,16 +239,16 @@ const CourseAboutData=[
         
         skillsH:"Skills you will Master",
         skillP:[
-            "Emotional Design",
-            " Spatial Design ",
-            " Accessibility and Inclusive Design ",
-            " Designing for Virtual Reality",
-            "Creating Dynamic User Experience",
-            "Designing for Conversation AI’s"
+            "User Flow & Wire Framing",
+            "Landing Page Development",
+            " Data Visualization ",
+            "Mobile UX",
+            "Visual Design",
+            "Journey Mapping"
         ]
     },
     {
-        id:"uiux-course-advanced",
+        id:"Spatial and Immersive UIUX Design",
         bgColor:"#f9f7ff",
         aboutH:"About the Course",
         description:"Advanced AI Powered UX/UX design curriculum is built on deep core values like user research, usability, testing, designing for modern technologies like Wear OS and Vision OS. Our strategic gamified learning process helps you gain foundational knowledge and build diversified projects for your portfolio.",
@@ -315,7 +315,7 @@ const CourseSyllabusData=[
         ]
     },
     {
-        id:"uiux-course-beginner",
+        id:"Introduction-to-Responsive-UI-Design",
         bgColor:"#f9f7ff",
         viewMore:"#6d28d9",
         hoverColor:"1c1623",
@@ -339,7 +339,7 @@ const CourseSyllabusData=[
         }        ]
     },
     {
-        id:"uiux-course-intermediate",
+        id:"Design-and-Develop-Multi-Device-UIUX",
         bgColor:"#f9f7ff",
         viewMore:"#6d28d9",
         hoverColor:"1c1623",
@@ -375,7 +375,7 @@ const CourseSyllabusData=[
         ]
     },
     {
-        id:"uiux-course-advanced",
+        id:"Spatial and Immersive UIUX Design",
         bgColor:"#f9f7ff",
         viewMore:"#6d28d9",
         hoverColor:"1c1623",
@@ -458,7 +458,7 @@ const CourseProjectData=[
          ]
     },
     {
-        id:"uiux-course-beginner",
+        id:"Introduction-to-Responsive-UI-Design",
         heading:"Projects",
         bgColor:"#d9cefb",
         project:[
@@ -475,7 +475,7 @@ const CourseProjectData=[
          ]
     },
     {
-        id:"uiux-course-intermediate",
+        id:"Design-and-Develop-Multi-Device-UIUX",
         heading:"Projects",
         bgColor:"#d9cefb",
         project:[
@@ -504,7 +504,7 @@ const CourseProjectData=[
          ]
     },
     {
-        id:"uiux-course-advanced",
+        id:"Spatial and Immersive UIUX Design",
         heading:"Projects",
         bgColor:"#d9cefb",
         project:[
@@ -556,7 +556,7 @@ const CourseReviewData=[
         ]
     },
     {
-        id:"uiux-course-beginner",
+        id:"Introduction-to-Responsive-UI-Design",
         bgColor:"#f9f7ff",
         heading:"Reviews",
         review:[
@@ -567,7 +567,7 @@ const CourseReviewData=[
         ]
     },
     {
-        id:"uiux-course-intermediate",
+        id:"Design-and-Develop-Multi-Device-UIUX",
         bgColor:"#f9f7ff",
         heading:"Reviews",
         review:[
@@ -578,7 +578,7 @@ const CourseReviewData=[
         ]
     },
     {
-        id:"uiux-course-advanced",
+        id:"Spatial and Immersive UIUX Design",
         bgColor:"#f9f7ff",
         heading:"Reviews",
         review:[
@@ -599,21 +599,21 @@ const CourseCertificateData=[
         description:"Add this credential to your LinkedIn profile, resume, or CV to showcase your expertise. Share your achievement on social media and during performance reviews to underscore your commitment to professional growth and success."
     },
     {
-        id:"uiux-course-beginner",
+        id:"Introduction-to-Responsive-UI-Design",
         bgColor:"#f9f7ff",
         image:uiuxcertificate,
         heading:"Earn Industry Recognised Certificate",
         description:"Add this credential to your LinkedIn profile, resume, or CV to showcase your expertise. Share your achievement on social media and during performance reviews to underscore your commitment to professional growth and success."
     },
     {
-        id:"uiux-course-intermediate",
+        id:"Design-and-Develop-Multi-Device-UIUX",
         bgColor:"#f9f7ff",
         image:uiuxcertificate,
         heading:"Earn Industry Recognised Certificate",
         description:"Add this credential to your LinkedIn profile, resume, or CV to showcase your expertise. Share your achievement on social media and during performance reviews to underscore your commitment to professional growth and success."
     },
     {
-        id:"uiux-course-advanced",
+        id:"Spatial and Immersive UIUX Design",
         bgColor:"#f9f7ff",
         image:uiuxcertificate,
         heading:"Earn Industry Recognised Certificate",
@@ -668,7 +668,7 @@ const CoursePaymentData=[
 
     },
     {
-        id:"uiux-course-beginner",
+        id:"Introduction-to-Responsive-UI-Design",
         bgColor:"#f4f0ff",
         shadowColor:"0px 0px 41px -8px #d5bdff",
         feeH:"Course Fee",
@@ -711,13 +711,13 @@ const CoursePaymentData=[
         ]
     },
 {
-    id:"uiux-course-intermediate",
+    id:"Design-and-Develop-Multi-Device-UIUX",
     bgColor:"#f4f0ff",
     shadowColor:"0px 0px 41px -8px #d5bdff",
     feeH:"Course Fee",
     weeks:"8 weeks",
     start:"Starting at",
-    rate:"INR 29,000",
+    rate:"INR 25,000",
     sub:"Including",
     sublist:[
         {list:"Lifetime access to course materials"},
@@ -755,7 +755,7 @@ const CoursePaymentData=[
 
 },
 {
-    id:"uiux-course-advanced",
+    id:"Spatial and Immersive UIUX Design",
     bgColor:"#f4f0ff",
     shadowColor:"0px 0px 41px -8px #d5bdff",
     feeH:"Course Fee",
@@ -824,7 +824,7 @@ const CourseFaqData=[
         ]
     },
     {
-        id:"uiux-course-beginner",
+        id:"Introduction-to-Responsive-UI-Design",
         bgColor:"#f9f7ff",
         dropIcon:ExpandMore,
         heading:"Frequently asked questions",
@@ -847,7 +847,7 @@ const CourseFaqData=[
         ]
     },
     {
-        id:"uiux-course-intermediate",
+        id:"Design-and-Develop-Multi-Device-UIUX",
         bgColor:"#f9f7ff",
         dropIcon:ExpandMore,
         heading:"Frequently asked questions",
@@ -870,7 +870,7 @@ const CourseFaqData=[
         ]
     },
     {
-        id:"uiux-course-advanced",
+        id:"Spatial and Immersive UIUX Design",
         bgColor:"#f9f7ff",
         dropIcon:ExpandMore,
         heading:"Frequently asked questions",

@@ -3,7 +3,7 @@ import Fullstar from '@public/assets/Images/comman/common/star_full.png';
 
 export const uiuxCourse = [
     {
-        id: "uiux-course-beginner",
+        id: "Introduction-to-Responsive-UI-Design",
         title: "Introduction to Responsive UI Design",
         description: "Learn how to apply design principles and create a responsive pages",
         bgColor: "#d9cefb",
@@ -21,7 +21,7 @@ export const uiuxCourse = [
         fullstar: Fullstar
     },
     {
-        id: "uiux-course-intermediate",
+        id: "Design-and-Develop-Multi-Device-UIUX",
         title: "Design and Develop Multi Device UI/UX",
         description: "Learn to build projects with native features of platforms and devices ",
         bgColor: "#d9cefb",
@@ -39,7 +39,7 @@ export const uiuxCourse = [
         fullstar: Fullstar
     },
     {
-        id: "uiux-course-advanced",
+        id: "Spatial-and-Immersive-UIUX-Design",
         title: "Spatial and Immersive UI/UX Design",
         description: "Learn to create immersive spatial and connected application ",
         bgColor: "#d9cefb",

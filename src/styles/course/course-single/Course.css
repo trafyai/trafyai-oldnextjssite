@@ -385,9 +385,14 @@
     display: flex;
     color: var(--landing-para-clr);
 }
-.course-skills-description li::before {
+[data-theme="light"] .course-skills-description li::before {
     content: "\2714"; /* Unicode tick mark character */
-    color: #121212; /* Change color if needed */
+    color: #1c1623; /* Change color if needed */
+    margin-right: 1rem; /* Add some space between tick mark and text */
+  }
+  [data-theme="dark"] .course-skills-description li::before {
+    content: "\2714"; /* Unicode tick mark character */
+    color: #fcfefe; /* Change color if needed */
     margin-right: 1rem; /* Add some space between tick mark and text */
   }
 

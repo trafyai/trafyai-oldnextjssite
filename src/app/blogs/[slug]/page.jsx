@@ -11,7 +11,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     metadataBase: `https://trafyai.com/blogs/${product.id}`,
     type: 'article',
     openGraph: {
-      title: product.title,
+      title: product.title, 
       description: product.metaDescription,
          
     },
