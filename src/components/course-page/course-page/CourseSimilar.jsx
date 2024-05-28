@@ -29,11 +29,11 @@ const CourseSimilar = (props) => {
     return (
         <div>
             {filteredCourseData.length > 0 && (
-        <div className="course-landing-ai">
+        <div className="course-landing-ai" style={{paddingTop:"90px"}}>
              <div className="course-landing-ai-container">
              
                 <div className="course-landing-ai-heading">
-                    <h2>Related Courses</h2>
+                    <h2>Upgrade Your UI/UX Journey</h2>
                 </div>
             
             </div>
