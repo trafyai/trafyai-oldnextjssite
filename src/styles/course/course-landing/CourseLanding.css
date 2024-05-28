@@ -40,13 +40,13 @@
     height: max-content;
     display: flex;
     flex-direction: column;
-    gap:2rem;
+    gap:1.5rem;
 }
 [data-theme="dark" ] .course-landing-ai-box{
     border:1px solid #4e4e4e;
 }
 .course-landing-ai-card-title{
-    padding:32px 24px;
+    padding:20px;
     border-top-left-radius: 24px;
     border-top-right-radius: 24px;
     background-color: #cefbdb;

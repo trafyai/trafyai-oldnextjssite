@@ -15,6 +15,7 @@ export const uiuxCourse = [
         },
         rating: "4.8",
         level: "Beginner",
+        certification:"Certified",
         duration: "4 weeks",
         halfstar: Halfstar,
         fullstar: Fullstar
@@ -32,6 +33,7 @@ export const uiuxCourse = [
         },
         rating: "4.8",
         level: "Intermediate",
+        certification:"Certified",
         duration: "8 weeks",
         halfstar: Halfstar,
         fullstar: Fullstar
@@ -50,6 +52,7 @@ export const uiuxCourse = [
         rating: "4.8",
         level: "Advanced",
         duration: "12 weeks",
+        certification:"Certified",
         halfstar: Halfstar,
         fullstar: Fullstar
     },

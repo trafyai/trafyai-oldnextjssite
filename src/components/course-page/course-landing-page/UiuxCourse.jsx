@@ -22,7 +22,8 @@ export default function UiuxCourse(){
                                 <Link href={`/courses/${item.id}`} className="course-landing-ai-box" key={item.id}>
             
                                     <div className="course-landing-ai-card-title" style={{backgroundColor:item.bgColor}}>
-                                        <h3>{item.title} </h3>
+                                        <h1 style={{fontSize:"14px",fontWeight:"400",fontFamily:"Inter",color:"#1c1623",marginBottom:"4px"}}>{item.level}</h1>
+                                        <h3 style={{fontWeight:"600"}}>{item.title} </h3>
                                     </div>
             
                                     <div className="course-landing-ai-contents">
@@ -51,7 +52,7 @@ export default function UiuxCourse(){
                                         </div>
             
                                         <div className="landing-ai-card-level">
-                                            <p>{item.level}</p>
+                                            <p>{item.certification}</p>
                                             <p>{item.duration}</p>
                                         </div>
             

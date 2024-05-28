@@ -361,6 +361,9 @@
 .tools-img img{
     height: 40px;
     width: 40px;
+    padding: 2px;
+    border-radius: 4px;
+    background-color: #fcfefe;
 }
 .course-skills{
     width: 30%;

@@ -39,7 +39,7 @@ export default function CourseSyllabus(props) {
 
   return (
     <main>
-      <div className="course-syllabus" >
+      <div className="course-syllabus">
         <div className="course-syllabus-container">
           <div className="course-syllabus-heading">
             <h2>{props.heading}</h2>
@@ -56,18 +56,12 @@ export default function CourseSyllabus(props) {
                   <Image
                     src={ExpandMore}
                     alt="Expand More Icon"
-                    
-                    className={`waccordion-icon ${
-                      accordionState[index]?.isRotated ? "rotated" : ""
-                    }`}
+                    className={`waccordion-icon ${accordionState[index]?.isRotated ? "rotated" : ""}`}
                   />
                   <Image
                     src={ExpandMoreB}
                     alt="Expand More Icon"
-                    
-                    className={`baccordion-icon ${
-                      accordionState[index]?.isRotated ? "rotated" : ""
-                    }`}
+                    className={`baccordion-icon ${accordionState[index]?.isRotated ? "rotated" : ""}`}
                   />
                 </div>
                 {accordionState[index]?.isOpen && (
@@ -78,33 +72,35 @@ export default function CourseSyllabus(props) {
               </div>
             ))}
           </div>
-          <div className="course-view-container">
-            {showAll ? (
-              <button
-                onClick={handleViewLess}
-                style={{
-                  color: hovered ? props.hoverColor : props.viewMore,
-                  transition: 'color 0.3s ease',
-                }}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-              >
-                View Less
-              </button>
-            ) : (
-              <button
-                onClick={handleViewMore}
-                style={{
-                  color: hovered ? props.hoverColor : props.viewMore,
-                  transition: 'color 0.3s ease',
-                }}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-              >
-                View More
-              </button>
-            )}
-          </div>
+          {props.syllabus && props.syllabus.length > 5 && (
+            <div className="course-view-container">
+              {showAll ? (
+                <button
+                  onClick={handleViewLess}
+                  style={{
+                    color: hovered ? "var(--landing-heading-clr)" : "var(--landing-para-clr)",
+                    transition: 'color 0.3s ease',
+                  }}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  View Less
+                </button>
+              ) : (
+                <button
+                  onClick={handleViewMore}
+                  style={{
+                    color: hovered ? "var(--landing-heading-clr)" : "var(--landing-para-clr)",
+                    transition: 'color 0.3s ease',
+                  }}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  View More
+                </button>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </main>
