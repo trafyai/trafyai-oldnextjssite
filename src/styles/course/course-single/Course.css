@@ -361,6 +361,9 @@
 .tools-img img{
     height: 40px;
     width: 40px;
+    padding: 2px;
+    border-radius: 4px;
+    background-color: #fcfefe;
 }
 .course-skills{
     width: 30%;
@@ -382,9 +385,14 @@
     display: flex;
     color: var(--landing-para-clr);
 }
-.course-skills-description li::before {
+[data-theme="light"] .course-skills-description li::before {
     content: "\2714"; /* Unicode tick mark character */
-    color: #121212; /* Change color if needed */
+    color: #1c1623; /* Change color if needed */
+    margin-right: 1rem; /* Add some space between tick mark and text */
+  }
+  [data-theme="dark"] .course-skills-description li::before {
+    content: "\2714"; /* Unicode tick mark character */
+    color: #fcfefe; /* Change color if needed */
     margin-right: 1rem; /* Add some space between tick mark and text */
   }
 
@@ -943,6 +951,9 @@
     font-weight: 700;
     font-family: var( --p-font);
     color:var(--trafy-purple);
+}
+[data-theme="light"] .payment-starting h3{
+    color:#a46dfa;
 }
 .payment-points p{
     font-size: 16px;

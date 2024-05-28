@@ -1,6 +1,8 @@
 'use client'
 import React from "react";
 import Image from "next/image";
+import CheckW from "@public/assets/Images/course-page/skills-section/check-w.png";
+import Checkb from "@public/assets/Images/course-page/skills-section/check-b.png";
 
 export default function CourseAbout(props){
     return(
