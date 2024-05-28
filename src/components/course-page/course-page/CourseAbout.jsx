@@ -6,7 +6,7 @@ export default function CourseAbout(props){
     return(
         <main>
             
-            <div className="course-description" style={{backgroundColor:props.bgColor}}>
+            <div className="course-description" >
                 <div className="course-description-container">
                     <div className="left-description-container">
                     <div className="about-course">

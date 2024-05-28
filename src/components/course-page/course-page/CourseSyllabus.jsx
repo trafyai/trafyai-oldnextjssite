@@ -1,6 +1,8 @@
 'use client'
 import React, { useState } from "react";
 import Image from "next/image";
+import ExpandMore from '@public/assets/Images/comman/common/expand_more_white.png';
+import ExpandMoreB from '@public/assets/Images/comman/common/expand_more_black.png';
 
 export default function CourseSyllabus(props) {
   const [accordionState, setAccordionState] = useState({});
@@ -37,7 +39,7 @@ export default function CourseSyllabus(props) {
 
   return (
     <main>
-      <div className="course-syllabus" style={{ backgroundColor: props.bgColor }}>
+      <div className="course-syllabus" >
         <div className="course-syllabus-container">
           <div className="course-syllabus-heading">
             <h2>{props.heading}</h2>
@@ -52,10 +54,18 @@ export default function CourseSyllabus(props) {
                 <div className="syllabus-accordion-title">
                   <h2>{item.title}</h2>
                   <Image
-                    src={props.dropIcon}
+                    src={ExpandMore}
                     alt="Expand More Icon"
-                    style={{ width: "13px", height: "19.200px" }}
-                    className={`accordion-icon ${
+                    
+                    className={`waccordion-icon ${
+                      accordionState[index]?.isRotated ? "rotated" : ""
+                    }`}
+                  />
+                  <Image
+                    src={ExpandMoreB}
+                    alt="Expand More Icon"
+                    
+                    className={`baccordion-icon ${
                       accordionState[index]?.isRotated ? "rotated" : ""
                     }`}
                   />

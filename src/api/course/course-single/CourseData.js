@@ -84,8 +84,8 @@ const CourseHeroData=[
         category:"UI/UX",
         popularity:"Popular",
         shareIcon:Share,
-        courseHeading:"Learn Advanced AI Powered UI/UX design with Figma",
-        courseDescription:"Explore the principles, material guidelines and core concepts behind cross platform responsive UI/UX development process.",
+        courseHeading:"Introduction to Responsive UI Design",
+        courseDescription:"Learn how to apply design principles and create a responsive pages.",
         rating:"4.8",
         ratingIcon:RatingStar,
         enrolled:"126 Enrolled in last week",
@@ -114,8 +114,8 @@ const CourseHeroData=[
         category:"UI/UX",
         popularity:"Popular",
         shareIcon:Share,
-        courseHeading:"Learn Advanced AI Powered UI/UX design with Figma",
-        courseDescription:"Explore the principles, material guidelines and core concepts behind cross platform responsive UI/UX development process.",
+        courseHeading:"Design and Develop Multi Device UI/UX",
+        courseDescription:"Learn to build projects with native features of platforms and devices. ",
         rating:"4.8",
         ratingIcon:RatingStar,
         enrolled:"126 Enrolled in last week",
@@ -144,8 +144,8 @@ const CourseHeroData=[
         category:"UI/UX",
         popularity:"Popular",
         shareIcon:Share,
-        courseHeading:"Learn Advanced AI Powered UI/UX design with Figma",
-        courseDescription:"Explore the principles, material guidelines and core concepts behind cross platform responsive UI/UX development process.",
+        courseHeading:"Spatial and Immersive UI/UX Design",
+        courseDescription:"Learn to create immersive spatial and connected application. ",
         rating:"4.8",
         ratingIcon:RatingStar,
         enrolled:"126 Enrolled in last week",
@@ -336,30 +336,7 @@ const CourseSyllabusData=[
         },
         {title:"Core Principles of UX & UX Adaption for Evolving Trends",
         contents:"Delve into the core principles of UX design and learn how to adapt them to changing trends and user behaviors, ensuring designs remain relevant and effective over time."
-        },
-        {title:"Data Visualization & Data Driven Design",
-        contents:"Explore the techniques for visualizing data effectively in user interfaces and leveraging data-driven design principles to create personalized and intuitive user experiences."
-        },
-        {title:"Mobile UX Concepts",
-        contents:" Understand the unique considerations and best practices for designing user experiences on mobile devices, including responsive design, touch interactions, and mobile-first design approaches."
-        },
-        {title:"Visual Design & Journey Mapping",
-        contents:"Learn how to use visual design elements effectively and map user journeys to create cohesive and engaging experiences across different touchpoints and channels."
-        },
-        {title:"Emotional Design & Spatial Design",
-        contents:"Explore the psychological aspects of design, including emotional design principles and spatial considerations, to create immersive and memorable user experiences that resonate with users on a deeper level."
-        },
-        {title:"Accessibility and Inclusive Design",
-        contents:"Understand the importance of designing for accessibility and inclusivity, including techniques for making digital products usable for people with disabilities and diverse user groups."
-        },
-        {title:"Designing for Virtual Reality & Designing for Conversation AI’s",
-        contents:" Learn the principles and best practices for designing immersive virtual reality experiences and conversational interfaces, including considerations for interaction design and user engagement."
-        },
-        {title:"Creating a Dynamic User Experience",
-        contents:" Learn advanced techniques for creating dynamic and interactive user experiences, including animation, gamification, and personalization, to captivate users and drive engagement."
-        },
-         
-        ]
+        }        ]
     },
     {
         id:"uiux-course-intermediate",
@@ -393,18 +370,7 @@ const CourseSyllabusData=[
         {title:"Visual Design & Journey Mapping",
         contents:"Learn how to use visual design elements effectively and map user journeys to create cohesive and engaging experiences across different touchpoints and channels."
         },
-        {title:"Emotional Design & Spatial Design",
-        contents:"Explore the psychological aspects of design, including emotional design principles and spatial considerations, to create immersive and memorable user experiences that resonate with users on a deeper level."
-        },
-        {title:"Accessibility and Inclusive Design",
-        contents:"Understand the importance of designing for accessibility and inclusivity, including techniques for making digital products usable for people with disabilities and diverse user groups."
-        },
-        {title:"Designing for Virtual Reality & Designing for Conversation AI’s",
-        contents:" Learn the principles and best practices for designing immersive virtual reality experiences and conversational interfaces, including considerations for interaction design and user engagement."
-        },
-        {title:"Creating a Dynamic User Experience",
-        contents:" Learn advanced techniques for creating dynamic and interactive user experiences, including animation, gamification, and personalization, to captivate users and drive engagement."
-        },
+        
          
         ]
     },
@@ -496,27 +462,16 @@ const CourseProjectData=[
         heading:"Projects",
         bgColor:"#d9cefb",
         project:[
-           
             {
-                title:"Ecommerce Web App",
-                description:"Develop a robust e-commerce app with intuitive navigation, seamless checkout, and personalized product recommendations for effortless online shopping.",
+                title:"Agency Landing Page ",
+                description:"Craft a sleek, professional landing page showcasing your services or agency expertise, with clear calls-to-action to drive conversions.",
                 bg_color:""
             },
             {
-                title:"Fitness Smartwatch App",
-                description:"Design a dynamic fitness app for smartwatches, featuring customizable workouts and real-time activity tracking to empower users to reach their fitness goals.",
+                title:"Blog Website",
+                description:"Design a user-friendly, visually appealing blog with seamless navigation and engaging content presentation for an immersive reader experience.",
                 bg_color:""
             },
-            {
-                title:"Payments Mobile App",
-                description:"Create an intuitive, secure mobile app for payments, with streamlined user flows and real-time transaction tracking for convenient financial management.",
-                bg_color:""
-            },
-            {
-                title:"Spatial Web Design ",
-                description:"Create an immersive and visually captivating spatial web design for streaming platforms, similar to the seamless experience offered by Netflix.",
-                bg_color:""
-            }
          ]
     },
     {
@@ -539,21 +494,13 @@ const CourseProjectData=[
                 description:"Develop a robust e-commerce app with intuitive navigation, seamless checkout, and personalized product recommendations for effortless online shopping.",
                 bg_color:""
             },
-            {
-                title:"Fitness Smartwatch App",
-                description:"Design a dynamic fitness app for smartwatches, featuring customizable workouts and real-time activity tracking to empower users to reach their fitness goals.",
-                bg_color:""
-            },
+           
             {
                 title:"Payments Mobile App",
                 description:"Create an intuitive, secure mobile app for payments, with streamlined user flows and real-time transaction tracking for convenient financial management.",
                 bg_color:""
             },
-            {
-                title:"Spatial Web Design ",
-                description:"Create an immersive and visually captivating spatial web design for streaming platforms, similar to the seamless experience offered by Netflix.",
-                bg_color:""
-            }
+            
          ]
     },
     {
@@ -576,11 +523,7 @@ const CourseProjectData=[
                 description:"Develop a robust e-commerce app with intuitive navigation, seamless checkout, and personalized product recommendations for effortless online shopping.",
                 bg_color:""
             },
-            {
-                title:"Fitness Smartwatch App",
-                description:"Design a dynamic fitness app for smartwatches, featuring customizable workouts and real-time activity tracking to empower users to reach their fitness goals.",
-                bg_color:""
-            },
+          
             {
                 title:"Payments Mobile App",
                 description:"Create an intuitive, secure mobile app for payments, with streamlined user flows and real-time transaction tracking for convenient financial management.",
@@ -590,7 +533,12 @@ const CourseProjectData=[
                 title:"Spatial Web Design ",
                 description:"Create an immersive and visually captivating spatial web design for streaming platforms, similar to the seamless experience offered by Netflix.",
                 bg_color:""
-            }
+            },
+            {
+                title:"Fitness Smartwatch App",
+                description:"Design a dynamic fitness app for smartwatches, featuring customizable workouts and real-time activity tracking to empower users to reach their fitness goals.",
+                bg_color:""
+            },
          ]
     },
 ]

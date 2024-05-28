@@ -7,11 +7,11 @@ import Link from "next/link";
 export default function CoursePayment(props){
     return(
         <main>
-             <div className="course-payment" style={{backgroundColor:props.bgColor}}>
+             <div className="course-payment" >
             <div className="course-payment-container">
                 <div className="course-payment-heading"><h2>{props.feeH}</h2></div>
                 <div className="course-payment-contents">
-                    <div className="course-payment-box" style={{boxShadow: props.shadowColor}}>
+                    <div className="course-payment-box" >
                         <div className="payment-month"><p>{props.weeks}</p></div>
                         <div className="payment-starting">
                             <p>{props.start}</p>

@@ -2,8 +2,8 @@
     padding-top: 120px;
     padding-bottom: 60px;
     display: flex;
-    justify-content: center;
-    background-color: #fff4ec;
+    justify-content:center;
+    background-color: var(--landing-bg);
 }
 .course-enquiry-form-container {
     width: 100%;
@@ -20,9 +20,9 @@
     flex-direction: column;
     gap: 1rem;
     padding: 32px 24px;
-    border: 1px solid #c1bfbf;
+    border: 1px solid var(--landing-cards-border);
     border-radius: 12px;
-    background-color: var(--h-text-w-clr);
+    background-color: var(--landing-bg);
 }
 .enquiryform-heading h2 {
     font-size: 32px;
@@ -30,7 +30,7 @@
     font-weight: 600;
     text-align: center;
     padding-bottom: 1.5rem;
-    color: var(--h-text-b-clr);
+    color:  var(--landing-heading-clr);;
 }
 .enquiryname {
     display: flex;
@@ -40,7 +40,7 @@
     font-size: 14px;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    color: var(--p-text-b-clr);
+    color: var( --landing-para-clr);
     margin-bottom: 8px;
 }
 .enquiryfname, .enquirylname, .enquiryemail, .enquiryphone, .enquiry-course, .enquirymessage {
@@ -53,11 +53,11 @@
     font-size: 16px;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    border: 1px solid #c1bfbf;
+    border: 1px solid var(--landing-cards-border);
     border-radius: 8px;
-    background-color: var(--h-text-w-clr);
+    background-color: var( --landing-bg); 
     margin-top: 8px;
-    color: var(--h-text-b-clr);
+    color:var(--landing-heading-clr);
 }
 .enquiry-message {
     padding: 12px;
@@ -98,9 +98,12 @@
     font-size: 16px;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    border: 1px solid #c1bfbf;
+    border: 1px solid var(--landing-cards-border);
     border-radius: 8px;
-    background-color: var(--h-text-w-clr);
+    background-color:  var( --landing-bg);  
+    height: 100px;
+    max-height: 200px;
+    max-width: 100%;
     margin-top: 8px;
     color: var(--h-text-b-clr);
     background: url('data:image/svg+xml;utf8,<svg fill="%23929292" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
@@ -109,4 +112,41 @@
 .enquiry-course:focus {
     border-color: var(--h-text-b-clr);
     outline: none;
+}
+.course-enquiry-button{
+    width: 100%;
+    height: max-content;
+    padding: 8px 16px;
+    border: 2px solid  var( --landing-heading-clr); 
+    background-color: var( --landing-heading-clr); 
+    color:  var( --landing-button-t); 
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 500;
+    font-family: 'Inter',sans-serif;
+}
+.course-enquiry-button:hover{
+    background-color: inherit;
+    color:  var( --landing-heading-clr); 
+}
+@media only screen and (max-width:600px){
+    .course-enquiry-form{
+        padding-top: 100px;
+        padding-bottom: 40px;
+    }
+    .course-enquiry-form-contents{
+        width: 90%;
+    }
+    .enquiryform-heading h2{
+        font-size: 28px;
+    }
+    .enquiryname{
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width:400px){
+    .enquiryform-heading h2{
+        font-size: 24px;
+        padding-bottom: 16px;
+    }
 }

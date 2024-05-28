@@ -5,7 +5,7 @@ import React from "react";
 export default function CourseReview(props){
     return(
         <main>
-            <div className="course-review" style={{backgroundColor:props.bgColor}}>
+            <div className="course-review" >
                 <div className="course-review-container">
                     <div className="course-review-heading">
                         <h2>{props.heading}</h2>

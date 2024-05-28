@@ -43,6 +43,9 @@
     --landing-cards-border:#dedede;
     --landing-cards-bg:#ffffff; /*fcfefe*/
     
+
+    --course-border:#121212;
+    
   }
   [data-theme='dark'] {
 
@@ -69,6 +72,9 @@
     
     --landing-cards-border:#3e3e3e;
     --landing-cards-bg:#2b2432;
+
+
+    --course-border:#b0b0b0;
   }
 
   *{
@@ -81,4 +87,26 @@
     body {
       margin: 0;
       overflow-y: scroll;
+    }
+
+
+
+    .baccordion-icon,  .waccordion-icon{
+      display: none;
+    }
+    [data-theme="light"] .baccordion-icon{
+      display: block;
+    }
+    [data-theme="dark"] .waccordion-icon{
+      display: block;
+    }
+
+    .course-share-icon-black,.course-share-icon-white{
+      display: none;
+    }
+    [data-theme="light"] .course-share-icon-black{
+      display: block;
+    }
+    [data-theme="dark"] .course-share-icon-white{
+      display: block;
     }

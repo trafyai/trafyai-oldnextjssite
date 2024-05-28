@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function CourseCertificate(props){
     return(
         <main>
-           <div className="course-certificate" style={{backgroundColor:props.bgColor}}>
+           <div className="course-certificate" >
                 <div className="course-certificate-container">
                     <div className="course-certificate-contents">
                         <div className="course-certificate-image">
