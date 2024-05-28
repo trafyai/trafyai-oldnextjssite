@@ -220,25 +220,24 @@
     border: 2px solid var( --landing-heading-clr);
     background-color: inherit;
     border-radius: 8px;
-    padding: 8px 20px;
-    padding-right: 24px;
+    padding: 6px 16px;
     color: var( --landing-heading-clr);
     margin-left: 8px;
 
     font-family: var(--p-font);
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
  }
  .header-signup{
     border: 2px solid var( --landing-heading-clr);
     border-radius: 8px;
     background-color: var( --landing-heading-clr);
-    padding: 8px 20px;
+    padding: 7px 16px;
     color:  var( --landing-button-t);
     font-family: var(--p-font);
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
  }
 

@@ -21,7 +21,7 @@ export default function CourseAbout(props){
                             <div className="tools-covered"><h2>{props.toolsH}</h2></div>
                             <div className="tools-img">
                             {props.toolsimg && props.toolsimg.map((tool, idx) => (
-  <Image key={idx} src={tool.url} alt={tool.alt} />
+                           tool.url &&  <Image key={idx} src={tool.url} alt={tool.alt} />
 ))}
                                
                             </div>
