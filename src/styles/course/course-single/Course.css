@@ -947,6 +947,9 @@
     font-family: var( --p-font);
     color:var(--trafy-purple);
 }
+[data-theme="light"] .payment-starting h3{
+    color:#a46dfa;
+}
 .payment-points p{
     font-size: 16px;
     font-weight: 600;
