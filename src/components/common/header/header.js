@@ -102,8 +102,8 @@ function Header({ initialTheme }) { // Add initialTheme prop here
           <Image
             src={Dark}
             onClick={dthemeChange}
-            width="20"
-            height="20"
+            width="24"
+            height="24"
             className=" dark-mode-icon"
           />
             </div>
@@ -129,8 +129,8 @@ function Header({ initialTheme }) { // Add initialTheme prop here
           <Image
             src={Dark}
             onClick={dthemeChange}
-            width="20"
-            height="20"
+            width="24"
+            height="24"
             className=" dark-mode-icon"
           />
             </div>

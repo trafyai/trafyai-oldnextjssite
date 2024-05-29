@@ -1,6 +1,7 @@
 import React from "react";
 import '@styles/course/course-single/Course.css';
-import { CourseHeroData, CourseAboutData, CourseSyllabusData , CourseProjectData , CourseReviewData ,CourseCertificateData , CoursePaymentData, CourseFaqData} from '@api/course/course-single/CourseData';
+import '@styles/course/course-landing/CourseLanding.css';
+import { CourseHeroData, CourseAboutData, CourseSyllabusData , CourseProjectData , CourseReviewData ,CourseCertificateData , CoursePaymentData, CourseFaqData, CourseSimilarData} from '@api/course/course-single/CourseData';
 import CourseHero from "@components/course-page/course-page/CourseHero";
 import CourseAbout from "@components/course-page/course-page/CourseAbout";
 import CourseSyllabus from "@components/course-page/course-page/CourseSyllabus";
@@ -9,6 +10,7 @@ import CourseReview from "@components/course-page/course-page/CourseReview";
 import CourseCertificate from "@components/course-page/course-page/CourseCertificate";
 import CoursePayment from "@components/course-page/course-page/CoursePayment";
 import CourseFaq from "@components/course-page/course-page/CourseFaq";
+import CourseSimilar from "@components/course-page/course-page/CourseSimilar";
 
 export async function generateMetadata({ params, searchParams }, parent) {
   
@@ -41,6 +43,7 @@ export default function CoursePage({params}) {
     const CertificateData = CourseCertificateData.find(course => course.id === slug);
     const PaymentData=CoursePaymentData.find(course => course.id === slug);
     const FaqData=CourseFaqData.find(course => course.id === slug);
+    const SimilarData=CourseSimilarData.find(course => course.id === slug);
 
    
   
@@ -56,6 +59,7 @@ export default function CoursePage({params}) {
             <CourseCertificate {...CertificateData}/>
             <CoursePayment {...PaymentData}/>
             <CourseFaq {...FaqData}/>
+            <CourseSimilar {...SimilarData}/>
         </main>
     );
 }

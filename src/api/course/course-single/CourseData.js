@@ -105,8 +105,9 @@ const CourseHeroData=[
         levelH:"Level",
         level:"Beginner",
         durationH:"Duration",
-        duration:"4 weeks"
-
+        duration:"4 weeks",
+        formLink:"https://uiux-courseenquiryform-default-rtdb.firebaseio.com/UIUX-CourseEnquiryFormData.json",
+        formCourse:"UI/UX Beginner"
     },
     {
         id:"Design-and-Develop-Multi-Device-UIUX",
@@ -135,8 +136,9 @@ const CourseHeroData=[
         levelH:"Level",
         level:"Intermediate",
         durationH:"Duration",
-        duration:"8 weeks"
-
+        duration:"8 weeks",
+        formLink:"https://uiux-courseenquiryform-default-rtdb.firebaseio.com/UIUX-CourseEnquiryFormData.json",
+        formCourse:"UI/UX Intermediate"
     },
     {
         id:"Spatial-and-Immersive-UIUX-Design",
@@ -165,8 +167,9 @@ const CourseHeroData=[
         levelH:"Level",
         level:"Advanced",
         durationH:"Duration",
-        duration:"12 weeks"
-
+        duration:"12 weeks",
+        formLink:"https://uiux-courseenquiryform-default-rtdb.firebaseio.com/UIUX-CourseEnquiryFormData.json",
+        formCourse:"UI/UX Advanced"
     }
 ]
 
@@ -206,9 +209,6 @@ const CourseAboutData=[
         toolsimg:[
             {url:Figma,alt:"Figma"},
             {url:Miro,alt:"Miro"},
-            {url:Chatgpt,alt:"Chatgpt"},
-            {url:Gemini,alt:"Gemini"},
-            {url:Framer,alt:"Framer"} 
 
         ],
         
@@ -231,8 +231,6 @@ const CourseAboutData=[
         toolsimg:[
             {url:Figma,alt:"Figma"},
             {url:Miro,alt:"Miro"},
-            {url:Chatgpt,alt:"Chatgpt"},
-            {url:Gemini,alt:"Gemini"},
             {url:Framer,alt:"Framer"} 
 
         ],
@@ -251,7 +249,7 @@ const CourseAboutData=[
         id:"Spatial-and-Immersive-UIUX-Design",
         bgColor:"#f9f7ff",
         aboutH:"About the Course",
-        description:"Advanced AI Powered UX/UX design curriculum is built on deep core values like user research, usability, testing, designing for modern technologies like Wear OS and Vision OS. Our strategic gamified learning process helps you gain foundational knowledge and build diversified projects for your portfolio.",
+        description:"Spatial and Immersive UI/UX Design curriculum is built on deep core values like user research, usability, testing, designing for modern technologies like Wear OS and Vision OS. Our strategic gamified learning process helps you gain foundational knowledge and build diversified projects for your portfolio.",
         toolsH:"Tools Covered",
         toolsimg:[
             {url:Figma,alt:"Figma"},
@@ -894,6 +892,34 @@ const CourseFaqData=[
     },
 ]
 
+const CourseSimilarData=[
+    {
+        id:"Introduction-to-Responsive-UI-Design",
+        course:"uiuxCourse",
+        ids:[
+            "Introduction-to-Responsive-UI-Design"
+        ]
+    },
+    {
+        id:"Design-and-Develop-Multi-Device-UIUX",
+        course:"uiuxCourse",
+        ids:[
+            "Introduction-to-Responsive-UI-Design",
+            "Design-and-Develop-Multi-Device-UIUX"
+        ]
+    },  
+    {
+        id:"Spatial-and-Immersive-UIUX-Design",
+        course:"uiuxCourse",
+        ids:[
+            "Introduction-to-Responsive-UI-Design",
+            "Design-and-Develop-Multi-Device-UIUX",
+            "Spatial-and-Immersive-UIUX-Design"
+        ]
+    }
+
+]
 
 
-export { CourseHeroData, CourseAboutData , CourseSyllabusData , CourseProjectData, CourseReviewData ,CourseCertificateData , CoursePaymentData, CourseFaqData};
+
+export { CourseHeroData, CourseAboutData , CourseSyllabusData , CourseProjectData, CourseReviewData ,CourseCertificateData , CoursePaymentData, CourseFaqData,  CourseSimilarData};

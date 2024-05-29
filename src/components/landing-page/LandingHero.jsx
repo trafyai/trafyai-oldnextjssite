@@ -10,7 +10,7 @@ const LandingHero = () => {
             <div className="landing-hero-section">
                 <div className="landing-hero-container">
                     <div className="landing-hero-heading">
-                        <h1>Learn how build and use AI across industries</h1>
+                        <h1>Learn how to build and use AI across industries</h1>
                     </div>
                     <div className="landing-hero-paragraph">
                         <p>trafy is collective education program that helps, guides, and educates students, and professionals to learn to build and use AI in their domain.</p>
