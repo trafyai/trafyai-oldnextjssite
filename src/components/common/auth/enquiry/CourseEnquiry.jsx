@@ -275,7 +275,7 @@ const EnquiryForm = (props) => {
                 await axios.post("http://localhost:5002/course-enquiry/submit", {
                     email: formData.email,
                     fname: formData.fname,
-                    // course: props.name
+                    course: props.name
                 }, { timeout: 10000 });
 
                 setFormData({
@@ -283,6 +283,7 @@ const EnquiryForm = (props) => {
                     lname: "",
                     email: "",
                     phone: "",
+                    course:"",
                     message: ""
                 });
                 setIsPopupVisible(false); // Close popup after successful submission
