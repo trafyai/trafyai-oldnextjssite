@@ -105,8 +105,9 @@ const CourseHeroData=[
         levelH:"Level",
         level:"Beginner",
         durationH:"Duration",
-        duration:"4 weeks"
-
+        duration:"4 weeks",
+        formLink:"https://uiux-courseenquiryform-default-rtdb.firebaseio.com/UIUX-CourseEnquiryFormData.json",
+        formCourse:"UI/UX Beginner"
     },
     {
         id:"Design-and-Develop-Multi-Device-UIUX",
@@ -135,8 +136,9 @@ const CourseHeroData=[
         levelH:"Level",
         level:"Intermediate",
         durationH:"Duration",
-        duration:"8 weeks"
-
+        duration:"8 weeks",
+        formLink:"https://uiux-courseenquiryform-default-rtdb.firebaseio.com/UIUX-CourseEnquiryFormData.json",
+        formCourse:"UI/UX Intermediate"
     },
     {
         id:"Spatial-and-Immersive-UIUX-Design",
@@ -165,8 +167,9 @@ const CourseHeroData=[
         levelH:"Level",
         level:"Advanced",
         durationH:"Duration",
-        duration:"12 weeks"
-
+        duration:"12 weeks",
+        formLink:"https://uiux-courseenquiryform-default-rtdb.firebaseio.com/UIUX-CourseEnquiryFormData.json",
+        formCourse:"UI/UX Advanced"
     }
 ]
 

@@ -4,11 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import shareBlack from '@public/assets/Images/course-page/hero-section/share.svg';
 import shareWhite from '@public/assets/Images/course-page/hero-section/share-white.png';
+import EnquiryForm from "@components/common/auth/enquiry/CourseEnquiry";
 
 export default function CourseHero(props) {
     const [showShare, setShowShare] = useState(false);
     const [pageUrl, setPageUrl] = useState('window.location.href');
     const [showAlert, setShowAlert] = useState(false);
+    const [enquiry,setEnquiry]= useState(false);
+    const [demo,setDemo]= useState(false);
 
     useEffect(() => {
         // Check if window object is available
@@ -30,6 +33,12 @@ export default function CourseHero(props) {
 
     function courseShare() {
         setShowShare(!showShare);
+    }
+    function showEnquiry(){
+        setEnquiry(!enquiry);
+    }
+    function showDemo(){
+        setDemo(!demo);
     }
 
     function shareToLinkedIn() {
@@ -96,8 +105,8 @@ export default function CourseHero(props) {
                             </div>
                         </div>
                         <div className="hero-cta">
-                            <Link className="hero-enroll" href="/enquiry">Join now</Link>
-                            <Link className="hero-demo" href="/free-demo">Free Demo</Link>
+                            <div className="hero-enroll" onClick={showEnquiry}>Join now</div>
+                            <div className="hero-demo" onClick={showDemo}>Free Demo</div>
                         </div>
                     </div>
                     {showShare &&
@@ -123,6 +132,9 @@ export default function CourseHero(props) {
                     {showAlert &&
                         <div className="alert">Link copied to clipboard</div>
                     }
+                  {enquiry &&   <EnquiryForm link={props.formLink}
+                                            course={props.formCourse}
+                                            name={props.courseHeading}/> }
                     <div className="hero-sub">
                         <div className="hero-platform">
                             <div className="platform-heading"><p>{props.platform}</p></div>

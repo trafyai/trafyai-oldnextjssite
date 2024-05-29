@@ -1,16 +1,42 @@
-.course-enquiry-form {
-    padding-top: 120px;
-    padding-bottom: 60px;
-    display: flex;
-    justify-content:center;
-    background-color: var(--landing-bg);
-}
-.course-enquiry-form-container {
-    width: 100%;
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
 }
+
+.course-enquiry-form-contents {
+    position: relative;
+    width: 450px;
+    background: var(--course-form-bg);
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.close-popup-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--landing-heading-clr);
+}
+
+.close-popup-button:hover {
+    color: var(--p-text-b-clr);
+}
+
+/* Other existing styles */
+
 .course-enquiry-form-contents {
     width: 450px;
 }
@@ -19,18 +45,22 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 32px 24px;
-    border: 1px solid var(--landing-cards-border);
     border-radius: 12px;
-    background-color: var(--landing-bg);
+    background-color: var(--course-form-bg);
 }
 .enquiryform-heading h2 {
     font-size: 32px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 600;
-    text-align: center;
-    padding-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
     color:  var(--landing-heading-clr);;
+}
+.enquiryform-heading h4 {
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    padding-bottom: 0.5rem;
+    color:  var(--landing-para-clr);;
 }
 .enquiryname {
     display: flex;
@@ -43,6 +73,7 @@
     color: var( --landing-para-clr);
     margin-bottom: 8px;
 }
+
 .enquiryfname, .enquirylname, .enquiryemail, .enquiryphone, .enquiry-course, .enquirymessage {
     width: 100%;
 }
@@ -53,11 +84,26 @@
     font-size: 16px;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    border: 1px solid var(--landing-cards-border);
+    border: 1px solid var(--course-form-border);
     border-radius: 8px;
-    background-color: var( --landing-bg); 
+    background-color: var( --course-form-bg); 
     margin-top: 8px;
-    color:var(--landing-heading-clr);
+    color:var(--landing-para-clr);
+}
+.enquiry-fname::placeholder,
+.enquiry-lname::placeholder,
+.enquiry-email::placeholder,
+.enquiry-phone::placeholder,
+.enquiry-message::placeholder {
+    color: #8a7d92; /* Replace with your desired color */
+}
+.enquiry-fname:focus,
+.enquiry-lname:focus,
+.enquiry-email:focus,
+.enquiry-phone:focus,
+.enquiry-message:focus,
+.enquiry-course:focus { /* Border color when input is focused */
+    outline: none; /* Remove default outline */
 }
 .enquiry-message {
     padding: 12px;
@@ -69,7 +115,7 @@
     padding: 16px 32px;
     font-size: 16px;
     font-family: 'Raleway', sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--h-text-w-clr);
     background-color: var(--h-text-b-clr);
     border: none;
@@ -84,7 +130,7 @@
     color: red;
     font-size: 12px;
     margin-top: 4px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 .enquirycourse-container {
     position: relative;
@@ -130,23 +176,31 @@
     color:  var( --landing-heading-clr); 
 }
 @media only screen and (max-width:600px){
-    .course-enquiry-form{
-        padding-top: 100px;
-        padding-bottom: 40px;
-    }
-    .course-enquiry-form-contents{
+
+     .course-enquiry-form-contents{
         width: 90%;
     }
     .enquiryform-heading h2{
         font-size: 28px;
     }
+}
+@media only screen and (max-width:400px){
+    .course-enquiry-form-contents{
+        padding: 24px;
+    }
+    .enquiryform{
+        gap:0.5rem;
+    }
+    .course-enquiry-form-contents{
+        width: 95%;
+    }
     .enquiryname{
         flex-direction: column;
     }
-}
-@media only screen and (max-width:400px){
     .enquiryform-heading h2{
         font-size: 24px;
-        padding-bottom: 16px;
+    }
+    .enquiryform-heading h4{
+        font-size: 16px;
     }
 }
