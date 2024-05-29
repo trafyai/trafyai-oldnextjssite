@@ -87,7 +87,7 @@
 
 //         // Proceed with form submission and additional actions asynchronously
 //         try {
-//             const res = await fetch(`${props.link}`, {
+//             const res = await fetch(${props.link}, {
 //                 method: 'POST',
 //                 headers: {
 //                     'Content-Type': 'application/json'
@@ -441,7 +441,7 @@ const EnquiryForm = (props) => {
 
         // Proceed with form submission and additional actions asynchronously
         try {
-            const res = await fetch('https://uiux-courseenquiryform-default-rtdb.firebaseio.com/UIUX-CourseEnquiryFormData.json', {
+            const res = await fetch(`${props.link}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
