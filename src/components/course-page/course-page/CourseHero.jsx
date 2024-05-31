@@ -6,6 +6,10 @@ import shareBlack from '@public/assets/Images/course-page/hero-section/share.svg
 import shareWhite from '@public/assets/Images/course-page/hero-section/share-white.png';
 import EnquiryForm from "@components/common/auth/enquiry/CourseEnquiry";
 
+
+import CourseEnquiry from '../../common/auth/enquiry/CourseEnquiry';
+
+
 export default function CourseHero(props) {
     const [showShare, setShowShare] = useState(false);
     const [pageUrl, setPageUrl] = useState('window.location.href');

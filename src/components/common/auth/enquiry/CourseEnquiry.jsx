@@ -1,12 +1,13 @@
-
-
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import '@styles/common/auth/Enquiry.css';
-import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import Swal from 'sweetalert2';
+import { database } from '@firebase';
+// Adjust the import path as necessary
+import { ref, set } from 'firebase/database';
+import axios from 'axios';
 
 const EnquiryForm = (props) => {
     const [formData, setFormData] = useState({
@@ -25,8 +26,10 @@ const EnquiryForm = (props) => {
         message: "",
     });
 
-    const [isPopupVisible, setIsPopupVisible] = useState(true);
 
+    console.log('Form Type:', props.formType);
+
+    const [isPopupVisible, setIsPopupVisible] = useState(true);
     const router = useRouter();
 
     const handleChange = (e) => {
@@ -93,8 +96,14 @@ const EnquiryForm = (props) => {
             }
         });
 
-        // Proceed with form submission and additional actions asynchronously
+        // Store form data in Firebase Realtime Database
         try {
+            const formType = props.formType || 'defaultFormType'; // Fallback to a default form type
+            const formPath = `${formType}/${Date.now()}`;
+            const formRef = ref(database, formPath);
+            await set(formRef, formData);
+
+            // Proceed with additional form submission actions asynchronously
             const res = await fetch(`${props.link}`, {
                 method: 'POST',
                 headers: {
@@ -115,11 +124,9 @@ const EnquiryForm = (props) => {
                     lname: "",
                     email: "",
                     phone: "",
-                    course:"",
                     message: ""
                 });
-            } 
-            else {
+            } else {
                 Swal.fire({
                     title: 'Error',
                     text: 'Error: ' + res.status,
