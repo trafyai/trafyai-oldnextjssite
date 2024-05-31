@@ -1,8 +1,7 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp, getApps, getApp } from "firebase/app";
-import { getAnalytics, isSupported, logEvent } from "firebase/analytics";
+// Import necessary functions from Firebase SDK
+import { initializeApp } from "firebase/app";
+import { getAnalytics, isSupported } from "firebase/analytics";
 import { getDatabase } from 'firebase/database';
-
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyC4uqcO99dlkSNHqi0HQZr2Adh3NFxOYR8",
@@ -34,4 +33,4 @@ if (typeof window !== 'undefined') {
   });
 }
 
-export { database, analytics, logEvent };
+export { database, analytics};
