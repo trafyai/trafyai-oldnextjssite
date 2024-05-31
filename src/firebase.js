@@ -19,8 +19,8 @@ const firebaseConfig = {
 let firebaseApp; // Define firebaseApp variable
 
 try {
-  // Attempt to initialize Firebase app
-  firebaseApp = initializeApp(firebaseConfig);
+  // Attempt to initialize Firebase app if it hasn't been initialized yet
+  firebaseApp = firebaseApp || initializeApp(firebaseConfig);
 } catch (error) {
   // Handle initialization errors
   console.error("Error initializing Firebase:", error.message);
