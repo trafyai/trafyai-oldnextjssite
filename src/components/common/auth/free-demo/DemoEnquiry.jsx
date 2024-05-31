@@ -6,6 +6,10 @@ import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import Swal from 'sweetalert2';
 
+import { database } from '@firebase';
+// Adjust the import path as necessary
+import { ref, set } from 'firebase/database';
+
 const DemoEnquiry = (props) => {
     const [formData, setFormData] = useState({
         fname: "",
@@ -93,7 +97,13 @@ const DemoEnquiry = (props) => {
 
         // Proceed with form submission and additional actions asynchronously
         try {
-            const res = await fetch('https://uiux-courseenquiryform-default-rtdb.firebaseio.com/UIUX-CourseDemoEnquiryData.json', {
+
+            const formType = props.formType || 'defaultFormType'; // Fallback to a default form type
+            const formPath = `${formType}/${Date.now()}`;
+            const formRef = ref(database, formPath);
+            await set(formRef, formData);
+
+            const res = await fetch(`${props.link}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -102,7 +112,7 @@ const DemoEnquiry = (props) => {
             });
 
             if (res.ok) {
-                await axios.post("http://localhost:5002/course-enquiry/submit", {
+                await axios.post("https://trafyai.com/freedemo-form/submit", {
                     email: formData.email,
                     fname: formData.fname,
                     course: props.name

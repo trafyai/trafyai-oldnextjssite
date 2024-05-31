@@ -27,8 +27,6 @@ const EnquiryForm = (props) => {
     });
 
 
-    console.log('Form Type:', props.formType);
-
     const [isPopupVisible, setIsPopupVisible] = useState(true);
     const router = useRouter();
 

@@ -75,7 +75,10 @@ const CourseHeroData=[
         levelH:"Level",
         level:"Advanced",
         durationH:"Duration",
-        duration:"4 weeks"
+        duration:"4 weeks",
+        formLink:"https://courseenquiryform-default-rtdb.firebaseio.com/DM-CourseEnquiryFormData.json",
+        demoLink:"https://uiux-advance-formdata-default-rtdb.firebaseio.com/DM-FreeDemoFormData.json",
+
 
     },
     {
