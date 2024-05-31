@@ -4,11 +4,13 @@ import { useState } from 'react';
 import '@styles/common/auth/Enquiry.css';
 import { useRouter } from 'next/navigation';
 import Swal from 'sweetalert2';
-import { database } from '@firebase';
+import { database, analytics } from '@firebase';
 // Adjust the import path as necessary
 import { ref, set } from 'firebase/database';
-import { analytics, logEvent } from 'firebase/analytics';
+import { getAnalytics, logEvent } from 'firebase/analytics';
 import axios from 'axios';
+
+import { firebaseApp } from '@firebase';
 
 const EnquiryForm = (props) => {
     const [formData, setFormData] = useState({

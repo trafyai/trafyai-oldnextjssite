@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics, isSupported } from "firebase/analytics";
 import { getDatabase } from 'firebase/database';
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyC4uqcO99dlkSNHqi0HQZr2Adh3NFxOYR8",
@@ -15,22 +16,33 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-let app;
-if (!getApps().length) {
-  app = initializeApp(firebaseConfig);
-} else {
-  app = getApp(); // If already initialized, use that one
+let firebaseApp; // Define firebaseApp variable
+
+try {
+  // Attempt to initialize Firebase app
+  firebaseApp = initializeApp(firebaseConfig);
+} catch (error) {
+  // Handle initialization errors
+  console.error("Error initializing Firebase:", error.message);
 }
 
-const database = getDatabase(app);
+// Initialize Firebase Analytics (if supported)
+let analytics = null;
 
-let analytics;
 if (typeof window !== 'undefined') {
-  isSupported().then((supported) => {
-    if (supported) {
-      analytics = getAnalytics(app);
+  const initializeAnalytics = async () => {
+    if (await isSupported()) {
+      analytics = getAnalytics(firebaseApp);
     }
+  };
+
+  initializeAnalytics().catch(error => {
+    console.error("Error initializing Firebase Analytics:", error.message);
   });
 }
 
-export { database, analytics};
+// Initialize Firebase Database
+const database = getDatabase(firebaseApp);
+
+// Export firebaseApp, analytics, and database
+export { firebaseApp, analytics, database };
