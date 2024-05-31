@@ -1,16 +1,15 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import '@styles/common/auth/Enquiry.css';
-import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import Swal from 'sweetalert2';
-
-import { database } from '@firebase';
-// Adjust the import path as necessary
+import { database, analytics } from '@firebase'; // Adjust the import path as necessary
 import { ref, set } from 'firebase/database';
+import { logEvent } from 'firebase/analytics'; // Import logEvent directly
+import axios from 'axios';
 
-const DemoEnquiry = (props) => {
+const EnquiryForm = (props) => {
     const [formData, setFormData] = useState({
         fname: "",
         lname: "",
@@ -28,7 +27,6 @@ const DemoEnquiry = (props) => {
     });
 
     const [isPopupVisible, setIsPopupVisible] = useState(true);
-
     const router = useRouter();
 
     const handleChange = (e) => {
@@ -95,14 +93,26 @@ const DemoEnquiry = (props) => {
             }
         });
 
-        // Proceed with form submission and additional actions asynchronously
-        try {
+        // Log an event to Firebase Analytics
+        if (analytics) {
+            logEvent(analytics, 'enquiry_form_submitted', {
+                fname,
+                lname,
+                email,
+                phone,
+                message,
+                course: props.name
+            });
+        }
 
+        // Store form data in Firebase Realtime Database
+        try {
             const formType = props.formType || 'defaultFormType'; // Fallback to a default form type
             const formPath = `${formType}/${Date.now()}`;
             const formRef = ref(database, formPath);
             await set(formRef, formData);
 
+            // Proceed with additional form submission actions asynchronously
             const res = await fetch(`${props.link}`, {
                 method: 'POST',
                 headers: {
@@ -112,7 +122,7 @@ const DemoEnquiry = (props) => {
             });
 
             if (res.ok) {
-                await axios.post("https://trafyai.com/freedemo-form/submit", {
+                await axios.post("https://trafyai.com/course-enquiry/submit", {
                     email: formData.email,
                     fname: formData.fname,
                     course: props.name
@@ -125,8 +135,7 @@ const DemoEnquiry = (props) => {
                     phone: "",
                     message: ""
                 });
-            } 
-            else {
+            } else {
                 Swal.fire({
                     title: 'Error',
                     text: 'Error: ' + res.status,
@@ -153,7 +162,7 @@ const DemoEnquiry = (props) => {
                         <button className="close-popup-button" onClick={() => setIsPopupVisible(false)}>x</button>
                         <form className="enquiryform" onSubmit={handleSubmit} autoComplete="off" method="POST">
                             <div className="enquiryform-heading">
-                                <h2>Get a Free Demo</h2>
+                                <h2>Get Started With</h2>
                                 <h4>{props.name}</h4>
                             </div>
                             <div className="enquiryname">
@@ -186,4 +195,4 @@ const DemoEnquiry = (props) => {
     );
 }
 
-export default DemoEnquiry;
+export default EnquiryForm;

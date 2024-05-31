@@ -7,6 +7,7 @@ import Swal from 'sweetalert2';
 import { database } from '@firebase';
 // Adjust the import path as necessary
 import { ref, set } from 'firebase/database';
+import { analytics, logEvent } from 'firebase/analytics';
 import axios from 'axios';
 
 const EnquiryForm = (props) => {
@@ -93,6 +94,21 @@ const EnquiryForm = (props) => {
                 content: 'swal2-content-custom' 
             }
         });
+
+
+        // Log an event to Firebase Analytics
+       // Log an event to Firebase Analytics
+if (analytics) {
+    logEvent(analytics, 'enquiry_form_submitted', {
+        fname,
+        lname,
+        email,
+        phone,
+        message,
+        course: props.name
+    });
+}
+
 
         // Store form data in Firebase Realtime Database
         try {
