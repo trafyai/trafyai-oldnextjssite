@@ -29,6 +29,7 @@ const Login = () => {
                 // If user successfully logged in
                 if (userCredential) {
                     // Redirect to home page
+                 
                     router.push('/');
                 }
             }

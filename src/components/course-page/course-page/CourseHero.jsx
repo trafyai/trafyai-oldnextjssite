@@ -5,6 +5,7 @@ import Link from "next/link";
 import shareBlack from '@public/assets/Images/course-page/hero-section/share.svg';
 import shareWhite from '@public/assets/Images/course-page/hero-section/share-white.png';
 import EnquiryForm from "@components/common/auth/enquiry/CourseEnquiry";
+import DemoEnquiry from "@components/common/auth/free-demo/DemoEnquiry";
 
 export default function CourseHero(props) {
     const [showShare, setShowShare] = useState(false);
@@ -133,6 +134,9 @@ export default function CourseHero(props) {
                         <div className="alert">Link copied to clipboard</div>
                     }
                   {enquiry &&   <EnquiryForm link={props.formLink}
+                                            course={props.formCourse}
+                                            name={props.courseHeading}/> }
+                  {demo &&   <DemoEnquiry link={props.demoLink}
                                             course={props.formCourse}
                                             name={props.courseHeading}/> }
                     <div className="hero-sub">

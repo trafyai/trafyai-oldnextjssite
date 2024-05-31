@@ -46,7 +46,7 @@
 
     --course-border:#121212;
     --course-form-bg:#fcfefe;
-    --course-form-border:#e4e1e1;
+    --course-form-border:#dad5d5;
   }
   [data-theme='dark'] {
 
@@ -77,7 +77,7 @@
 
     --course-border:#b0b0b0;
     --course-form-bg:#2c2634;
-    --course-form-border:#433e48;
+    --course-form-border:#524d58;
   }
 
   *{
