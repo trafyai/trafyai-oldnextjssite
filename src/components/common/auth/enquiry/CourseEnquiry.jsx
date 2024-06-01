@@ -4,13 +4,29 @@ import { useState } from 'react';
 import '@styles/common/auth/Enquiry.css';
 import { useRouter } from 'next/navigation';
 import Swal from 'sweetalert2';
-import { database, analytics } from '@firebase';
-// Adjust the import path as necessary
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/database';
+import 'firebase/compat/analytics';
 import { ref, set } from 'firebase/database';
-import { getAnalytics, logEvent } from 'firebase/analytics';
 import axios from 'axios';
 
-import { firebaseApp } from '@firebase';
+const firebaseConfig = {
+    apiKey: "AIzaSyAYBQePiV6UD4ZwTGo9HCEdaU9-UTZEojU",
+    authDomain: "uiux-beginners-formdata.firebaseapp.com",
+    databaseURL: "https://uiux-beginners-formdata-default-rtdb.firebaseio.com",
+    projectId: "uiux-beginners-formdata",
+    storageBucket: "uiux-beginners-formdata.appspot.com",
+    messagingSenderId: "769923610555",
+    appId: "1:769923610555:web:8849f6c24388561d13769e",
+    measurementId: "G-VPXD426XTQ"
+  };
+
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+}
+
+const database = firebase.database();
+const analytics = typeof window !== 'undefined' ? firebase.analytics() : null;
 
 const EnquiryForm = (props) => {
     const [formData, setFormData] = useState({
@@ -28,7 +44,6 @@ const EnquiryForm = (props) => {
         phone: "",
         message: "",
     });
-
 
     const [isPopupVisible, setIsPopupVisible] = useState(true);
     const router = useRouter();
@@ -97,20 +112,17 @@ const EnquiryForm = (props) => {
             }
         });
 
-
         // Log an event to Firebase Analytics
-       // Log an event to Firebase Analytics
-if (analytics) {
-    logEvent(analytics, 'enquiry_form_submitted', {
-        fname,
-        lname,
-        email,
-        phone,
-        message,
-        course: props.name
-    });
-}
-
+        if (analytics) {
+            firebase.analytics().logEvent('enquiry_form_submitted', {
+                fname,
+                lname,
+                email,
+                phone,
+                message,
+                course: props.name
+            });
+        }
 
         // Store form data in Firebase Realtime Database
         try {
@@ -129,11 +141,11 @@ if (analytics) {
             });
 
             if (res.ok) {
-                await axios.post("https://trafyai.com/course-enquiry/submit", {
+                await axios.post("http://localhost:5002/course-enquiry/submit", {
                     email: formData.email,
                     fname: formData.fname,
                     course: props.name
-                }, { timeout: 10000 });
+                }, { timeout: 15000 });
 
                 setFormData({
                     fname: "",

@@ -88,19 +88,6 @@ const Signup = () => {
             if (user) {
                 alert("Account Created");
                 router.push('/login');
-    
-                // Send a request to your backend to notify via email
-                // fetch('http://localhost:5002/signup ', {
-                //     method: 'POST',
-                //     headers: {
-                //         'Content-Type': 'application/json'
-                //     },
-                //     body: JSON.stringify({ email: user.user.email })
-                // }).then(() => {
-                //     router.push('/login'); // Redirect to login page
-                // }).catch((error) => {
-                //     console.error('Error sending email:', error);
-                // });
             }
         } catch (err) {
             alert(err.message);
