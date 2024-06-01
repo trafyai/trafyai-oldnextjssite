@@ -4,29 +4,7 @@ import { useState } from 'react';
 import '@styles/common/auth/Enquiry.css';
 import { useRouter } from 'next/navigation';
 import Swal from 'sweetalert2';
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/database';
-import 'firebase/compat/analytics';
-import { ref, set } from 'firebase/database';
 import axios from 'axios';
-
-const firebaseConfig = {
-    apiKey: "AIzaSyAYBQePiV6UD4ZwTGo9HCEdaU9-UTZEojU",
-    authDomain: "uiux-beginners-formdata.firebaseapp.com",
-    databaseURL: "https://uiux-beginners-formdata-default-rtdb.firebaseio.com",
-    projectId: "uiux-beginners-formdata",
-    storageBucket: "uiux-beginners-formdata.appspot.com",
-    messagingSenderId: "769923610555",
-    appId: "1:769923610555:web:8849f6c24388561d13769e",
-    measurementId: "G-VPXD426XTQ"
-  };
-
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-}
-
-const database = firebase.database();
-const analytics = typeof window !== 'undefined' ? firebase.analytics() : null;
 
 const EnquiryForm = (props) => {
     const [formData, setFormData] = useState({
@@ -112,26 +90,8 @@ const EnquiryForm = (props) => {
             }
         });
 
-        // Log an event to Firebase Analytics
-        if (analytics) {
-            firebase.analytics().logEvent('enquiry_form_submitted', {
-                fname,
-                lname,
-                email,
-                phone,
-                message,
-                course: props.name
-            });
-        }
-
-        // Store form data in Firebase Realtime Database
+        // Store form data in the backend
         try {
-            const formType = props.formType || 'defaultFormType'; // Fallback to a default form type
-            const formPath = `${formType}/${Date.now()}`;
-            const formRef = ref(database, formPath);
-            await set(formRef, formData);
-
-            // Proceed with additional form submission actions asynchronously
             const res = await fetch(`${props.link}`, {
                 method: 'POST',
                 headers: {

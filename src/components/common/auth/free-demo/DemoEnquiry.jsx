@@ -4,29 +4,7 @@ import { useState } from 'react';
 import '@styles/common/auth/Enquiry.css';
 import { useRouter } from 'next/navigation';
 import Swal from 'sweetalert2';
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/database';
-import 'firebase/compat/analytics';
-import { ref, set } from 'firebase/database';
 import axios from 'axios';
-
-const firebaseConfig = {
-  apiKey: "AIzaSyC4uqcO99dlkSNHqi0HQZr2Adh3NFxOYR8",
-  authDomain: "uiux-courseenquiryform.firebaseapp.com",
-  databaseURL: "https://uiux-courseenquiryform-default-rtdb.firebaseio.com",
-  projectId: "uiux-courseenquiryform",
-  storageBucket: "uiux-courseenquiryform.appspot.com",
-  messagingSenderId: "332629674053",
-  appId: "1:332629674053:web:002d0f769df1deb8373b2c",
-  measurementId: "G-B17EZ6MNRD"
-};
-
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-}
-
-const database = firebase.database();
-const analytics = typeof window !== 'undefined' ? firebase.analytics() : null;
 
 const EnquiryForm = (props) => {
     const [formData, setFormData] = useState({
@@ -112,26 +90,8 @@ const EnquiryForm = (props) => {
             }
         });
 
-        // Log an event to Firebase Analytics
-        if (analytics) {
-            firebase.analytics().logEvent('enquiry_form_submitted', {
-                fname,
-                lname,
-                email,
-                phone,
-                message,
-                course: props.name
-            });
-        }
-
-        // Store form data in Firebase Realtime Database
+        // Store form data in the backend
         try {
-            const formType = props.formType || 'defaultFormType'; // Fallback to a default form type
-            const formPath = `${formType}/${Date.now()}`;
-            const formRef = ref(database, formPath);
-            await set(formRef, formData);
-
-            // Proceed with additional form submission actions asynchronously
             const res = await fetch(`${props.link}`, {
                 method: 'POST',
                 headers: {
@@ -141,7 +101,7 @@ const EnquiryForm = (props) => {
             });
 
             if (res.ok) {
-                await axios.post("http://trafyai.com/freedemo-form/submit", {
+                await axios.post("http://localhost:5002/freedemo-form/submit", {
                     email: formData.email,
                     fname: formData.fname,
                     course: props.name

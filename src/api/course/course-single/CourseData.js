@@ -109,9 +109,9 @@ const CourseHeroData=[
         level:"Beginner",
         durationH:"Duration",
         duration:"4 weeks",
-        formLink:"https://uiux-beginners-formdata-default-rtdb.firebaseio.com/UIUX-BeginnersForm.json",
+        formLink:"https://uiux-beginners-formdata-default-rtdb.firebaseio.com/UIUX-EnquiryFormData.json",
         formCourse:"UI/UX Beginner",
-        demoLink:"https://freedemo-form-default-rtdb.firebaseio.com/UIUX-BeginnersDemoForm.json",
+        demoLink:"https://freedemo-form-default-rtdb.firebaseio.com/UIUX-FreeDemoForm.json",
     },
     {
         id:"Design-and-Develop-Multi-Device-UIUX",
@@ -141,9 +141,9 @@ const CourseHeroData=[
         level:"Intermediate",
         durationH:"Duration",
         duration:"8 weeks",
-        formLink:"https://uiux-beginners-formdata-default-rtdb.firebaseio.com/UIUX-IntermediateForm.json",
+        formLink:"https://uiux-beginners-formdata-default-rtdb.firebaseio.com/UIUX-EnquiryFormData.json",
         formCourse:"UI/UX Intermediate",
-        demoLink:"https://freedemo-form-default-rtdb.firebaseio.com/UIUX-IntermediateFreeDemoForm.json"
+        demoLink:"https://freedemo-form-default-rtdb.firebaseio.com/UIUX-FreeDemoForm.json"
     },
     {
         id:"Spatial-and-Immersive-UIUX-Design",
@@ -173,9 +173,9 @@ const CourseHeroData=[
         level:"Advanced",
         durationH:"Duration",
         duration:"12 weeks",
-        formLink:"https://uiux-beginners-formdata-default-rtdb.firebaseio.com/UIUX-AdvanceForm.json",
+        formLink:"https://uiux-beginners-formdata-default-rtdb.firebaseio.com/UIUX-EnquiryFormData.json",
         formCourse:"UI/UX Advanced",
-        demoLink:"https://freedemo-form-default-rtdb.firebaseio.com/UIUX-AdvanceFreeDemoForm.json"
+        demoLink:"https://freedemo-form-default-rtdb.firebaseio.com/UIUX-FreeDemoForm.json"
     }
 ]
 
