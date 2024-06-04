@@ -101,7 +101,7 @@ const EnquiryForm = (props) => {
             });
 
             if (res.ok) {
-                await axios.post("http://localhost:5002/freedemo-form/submit", {
+                await axios.post("https://trafyai.com/freedemo-form/submit", {
                     email: formData.email,
                     fname: formData.fname,
                     course: props.name
