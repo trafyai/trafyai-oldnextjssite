@@ -109,7 +109,7 @@ const CourseHeroData=[
         level:"Beginner",
         durationH:"Duration",
         duration:"4 weeks",
-        formLink:"https://uiux-beginners-formdata-default-rtdb.firebaseio.com/UIUX-EnquiryFormData.json",
+        formLink:"https://uiux-intermediate-formdata-default-rtdb.firebaseio.com/UIUX-BeginnersEnquiryFormData.json",
         formCourse:"UI/UX Beginner",
         demoLink:"https://freedemo-form-default-rtdb.firebaseio.com/UIUX-FreeDemoForm.json",
     },
@@ -141,7 +141,7 @@ const CourseHeroData=[
         level:"Intermediate",
         durationH:"Duration",
         duration:"8 weeks",
-        formLink:"https://uiux-beginners-formdata-default-rtdb.firebaseio.com/UIUX-EnquiryFormData.json",
+        formLink:"https://uiux-intermediate-formdata-default-rtdb.firebaseio.com/UIUX-IntermediateEnquiryFormData.json",
         formCourse:"UI/UX Intermediate",
         demoLink:"https://freedemo-form-default-rtdb.firebaseio.com/UIUX-FreeDemoForm.json"
     },
@@ -173,7 +173,7 @@ const CourseHeroData=[
         level:"Advanced",
         durationH:"Duration",
         duration:"12 weeks",
-        formLink:"https://uiux-beginners-formdata-default-rtdb.firebaseio.com/UIUX-EnquiryFormData.json",
+        formLink:"https://uiux-intermediate-formdata-default-rtdb.firebaseio.com/UIUX-AdvanceEnquiryFormData.json",
         formCourse:"UI/UX Advanced",
         demoLink:"https://freedemo-form-default-rtdb.firebaseio.com/UIUX-FreeDemoForm.json"
     }
